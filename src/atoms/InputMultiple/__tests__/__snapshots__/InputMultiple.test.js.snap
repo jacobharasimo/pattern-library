@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputMultiple renders 1`] = `undefined`;
+
+exports[`InputMultiple renders with already selected options 1`] = `undefined`;
+
+exports[`InputMultiple renders with errors 1`] = `undefined`;
+
+exports[`InputMultiple renders with label 1`] = `undefined`;

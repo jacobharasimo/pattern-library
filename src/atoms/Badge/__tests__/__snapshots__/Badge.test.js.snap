@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge component renders 1`] = `
+<div>
+  <div
+    class="sc-bdvvtL cAjLFI"
+  >
+    9
+  </div>
+</div>
+`;
+
+exports[`Badge component renders in sm size 1`] = `
+<div>
+  <div
+    class="sc-bdvvtL ddgyko"
+  >
+    9
+  </div>
+</div>
+`;
+
+exports[`Badge component renders with className 1`] = `
+<div>
+  <div
+    class="sc-bdvvtL cAjLFI test-class"
+  >
+    9
+  </div>
+</div>
+`;

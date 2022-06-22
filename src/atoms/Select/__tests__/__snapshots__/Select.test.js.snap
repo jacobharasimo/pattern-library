@@ -1,0 +1,642 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select renders 1`] = `
+<div>
+  <div
+    class="sc-bdvvtL fThWaO"
+  >
+    <label
+      class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+      for="Select"
+    >
+      Select me
+    </label>
+    <div
+      class=" css-2b097c-container"
+    >
+      <div
+        class="Select__control css-yk16xz-control"
+      >
+        <div
+          class="Select__value-container css-g1d714-ValueContainer"
+        >
+          <div
+            class="Select__placeholder css-1wa3eu0-placeholder"
+          />
+          <input
+            aria-autocomplete="list"
+            class="css-62g3xt-dummyInput"
+            id="Select"
+            readonly=""
+            tabindex="0"
+            value=""
+          />
+        </div>
+        <div
+          class="Select__indicators css-1hb7zxy-IndicatorsContainer"
+        >
+          <div
+            aria-hidden="true"
+            class="Select__indicator Select__dropdown-indicator css-tlfecz-indicatorContainer"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-bdvvtL gbAfkj"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="6 9 12 15 18 9"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <input
+        name="Select"
+        type="hidden"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Select renders lg 1`] = `
+<div>
+  <div
+    class="sc-bdvvtL jIHdIB"
+  >
+    <label
+      class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+      for="Select"
+    >
+      Select me
+    </label>
+    <div
+      class=" css-2b097c-container"
+    >
+      <div
+        class="Select__control css-yk16xz-control"
+      >
+        <div
+          class="Select__value-container css-g1d714-ValueContainer"
+        >
+          <div
+            class="Select__placeholder css-1wa3eu0-placeholder"
+          />
+          <input
+            aria-autocomplete="list"
+            class="css-62g3xt-dummyInput"
+            id="Select"
+            readonly=""
+            tabindex="0"
+            value=""
+          />
+        </div>
+        <div
+          class="Select__indicators css-1hb7zxy-IndicatorsContainer"
+        >
+          <div
+            aria-hidden="true"
+            class="Select__indicator Select__dropdown-indicator css-tlfecz-indicatorContainer"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-bdvvtL gbAfkj"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="6 9 12 15 18 9"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <input
+        name="Select"
+        type="hidden"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Select renders multiple selected values 1`] = `
+<div>
+  <div
+    class="sc-bdvvtL fThWaO"
+  >
+    <label
+      class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+      for="Select"
+    >
+      Select me
+    </label>
+    <div
+      class=" css-2b097c-container"
+    >
+      <div
+        class="Select__control css-yk16xz-control"
+      >
+        <div
+          class="Select__value-container Select__value-container--has-value css-g1d714-ValueContainer"
+        >
+          <div
+            class="Select__placeholder css-1wa3eu0-placeholder"
+          />
+          <input
+            aria-autocomplete="list"
+            class="css-62g3xt-dummyInput"
+            id="Select"
+            readonly=""
+            tabindex="0"
+            value=""
+          />
+        </div>
+        <div
+          class="Select__indicators css-1hb7zxy-IndicatorsContainer"
+        >
+          <div
+            aria-hidden="true"
+            class="Select__indicator Select__dropdown-indicator css-tlfecz-indicatorContainer"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-bdvvtL gbAfkj"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="6 9 12 15 18 9"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <input
+        name="Select"
+        type="hidden"
+        value="1"
+      />
+    </div>
+    <div
+      class="sc-bdvvtL keXViJ"
+    >
+      <div
+        class="sc-bdvvtL erWBHb"
+        color="text"
+        font-weight="body"
+      >
+        option 1
+        <button
+          class="sc-bdvvtL jMBCXr"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="sc-bdvvtL bghNvw"
+            display="block"
+            fill="none"
+            height="16px"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="18"
+              x2="6"
+              y1="6"
+              y2="18"
+            />
+            <line
+              x1="6"
+              x2="18"
+              y1="6"
+              y2="18"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="sc-bdvvtL erWBHb"
+        color="text"
+        font-weight="body"
+      >
+        option 2
+        <button
+          class="sc-bdvvtL jMBCXr"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="sc-bdvvtL bghNvw"
+            display="block"
+            fill="none"
+            height="16px"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="18"
+              x2="6"
+              y1="6"
+              y2="18"
+            />
+            <line
+              x1="6"
+              x2="18"
+              y1="6"
+              y2="18"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Select renders multiple values with option label formatter 1`] = `
+<div>
+  <div
+    class="sc-bdvvtL fThWaO"
+  >
+    <label
+      class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+      for="Select"
+    >
+      Select me
+    </label>
+    <div
+      class=" css-2b097c-container"
+    >
+      <div
+        class="Select__control css-yk16xz-control"
+      >
+        <div
+          class="Select__value-container css-g1d714-ValueContainer"
+        >
+          <div
+            class="Select__placeholder css-1wa3eu0-placeholder"
+          />
+          <input
+            aria-autocomplete="list"
+            class="css-62g3xt-dummyInput"
+            id="Select"
+            readonly=""
+            tabindex="0"
+            value=""
+          />
+        </div>
+        <div
+          class="Select__indicators css-1hb7zxy-IndicatorsContainer"
+        >
+          <div
+            aria-hidden="true"
+            class="Select__indicator Select__dropdown-indicator css-tlfecz-indicatorContainer"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-bdvvtL gbAfkj"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="6 9 12 15 18 9"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <input
+        name="Select"
+        type="hidden"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Select renders sm 1`] = `
+<div>
+  <div
+    class="sc-bdvvtL iutvPe"
+  >
+    <label
+      class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+      for="Select"
+    >
+      Select me
+    </label>
+    <div
+      class=" css-2b097c-container"
+    >
+      <div
+        class="Select__control css-yk16xz-control"
+      >
+        <div
+          class="Select__value-container css-g1d714-ValueContainer"
+        >
+          <div
+            class="Select__placeholder css-1wa3eu0-placeholder"
+          />
+          <input
+            aria-autocomplete="list"
+            class="css-62g3xt-dummyInput"
+            id="Select"
+            readonly=""
+            tabindex="0"
+            value=""
+          />
+        </div>
+        <div
+          class="Select__indicators css-1hb7zxy-IndicatorsContainer"
+        >
+          <div
+            aria-hidden="true"
+            class="Select__indicator Select__dropdown-indicator css-tlfecz-indicatorContainer"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-bdvvtL gbAfkj"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="6 9 12 15 18 9"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <input
+        name="Select"
+        type="hidden"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Select renders with error 1`] = `
+<div>
+  <div
+    class="sc-bdvvtL fThWaO"
+  >
+    <label
+      class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+      for="Select"
+    >
+      Select me
+    </label>
+    <div
+      class=" css-2b097c-container"
+    >
+      <div
+        class="Select__control css-yk16xz-control"
+      >
+        <div
+          class="Select__value-container css-g1d714-ValueContainer"
+        >
+          <div
+            class="Select__placeholder css-1wa3eu0-placeholder"
+          />
+          <input
+            aria-autocomplete="list"
+            class="css-62g3xt-dummyInput"
+            id="Select"
+            readonly=""
+            tabindex="0"
+            value=""
+          />
+        </div>
+        <div
+          class="Select__indicators css-1hb7zxy-IndicatorsContainer"
+        >
+          <div
+            aria-hidden="true"
+            class="Select__indicator Select__dropdown-indicator css-tlfecz-indicatorContainer"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-bdvvtL gbAfkj"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="6 9 12 15 18 9"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <input
+        name="Select"
+        type="hidden"
+        value=""
+      />
+    </div>
+    <div
+      class="sc-bdvvtL hQnSTx"
+      color="danger"
+      font-weight="body"
+    >
+      Error Message
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Select renders with icon and tooltip in options 1`] = `
+<div>
+  <div
+    class="sc-bdvvtL fThWaO"
+  >
+    <label
+      class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+      for="Select"
+    >
+      Select me
+    </label>
+    <div
+      class=" css-2b097c-container"
+    >
+      <div
+        class="Select__control css-yk16xz-control"
+      >
+        <div
+          class="Select__value-container css-g1d714-ValueContainer"
+        >
+          <div
+            class="Select__placeholder css-1wa3eu0-placeholder"
+          />
+          <input
+            aria-autocomplete="list"
+            class="css-62g3xt-dummyInput"
+            id="Select"
+            readonly=""
+            tabindex="0"
+            value=""
+          />
+        </div>
+        <div
+          class="Select__indicators css-1hb7zxy-IndicatorsContainer"
+        >
+          <div
+            aria-hidden="true"
+            class="Select__indicator Select__dropdown-indicator css-tlfecz-indicatorContainer"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-bdvvtL gbAfkj"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="6 9 12 15 18 9"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <input
+        name="Select"
+        type="hidden"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Select renders with label 1`] = `
+<div>
+  <div
+    class="sc-bdvvtL fThWaO"
+  >
+    <label
+      class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+      for="Select"
+    >
+      Label
+    </label>
+    <div
+      class=" css-2b097c-container"
+    >
+      <div
+        class="Select__control css-yk16xz-control"
+      >
+        <div
+          class="Select__value-container css-g1d714-ValueContainer"
+        >
+          <div
+            class="Select__placeholder css-1wa3eu0-placeholder"
+          />
+          <input
+            aria-autocomplete="list"
+            class="css-62g3xt-dummyInput"
+            id="Select"
+            readonly=""
+            tabindex="0"
+            value=""
+          />
+        </div>
+        <div
+          class="Select__indicators css-1hb7zxy-IndicatorsContainer"
+        >
+          <div
+            aria-hidden="true"
+            class="Select__indicator Select__dropdown-indicator css-tlfecz-indicatorContainer"
+          >
+            <svg
+              aria-hidden="true"
+              class="sc-bdvvtL gbAfkj"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="6 9 12 15 18 9"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <input
+        name="Select"
+        type="hidden"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;

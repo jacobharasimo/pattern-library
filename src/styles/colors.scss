@@ -1,0 +1,51 @@
+:root {
+  /* Declarative colors, AVOID using these outside this file  */
+  /* Brand */
+  --color-brand-primary: #4900ff;
+  --color-brand-black: #00005a;
+  --color-brand-gray: #99a1c7;
+
+  /* Gray Palette */
+  --color-black: #00002E;
+  --color-gray-1: #4c5566;
+  --color-gray-2: #7c899c;
+  --color-gray-3: #a6b1bf;
+  --color-gray-4: #e2e8f0;
+  --color-gray-5: #edf2f7;
+  --color-gray-6: #f7fafc;
+  --color-white: #ffffff;
+
+  /* Support Palette */
+  --color-green-1: #48bb78;
+  --color-yellow-1: #f2c94c;
+  --color-red-1: #f74052;
+  --color-blue-1: #4299e1;
+
+  /* Semantic colors, USE these outside this file  */
+  /* Colors Use */
+  --color-primary: var(--color-brand-primary);
+  --color-accent: var(--color-brand-primary);
+
+  --color-success: var(--color-green-1);
+  --color-info: var(--color-blue-1);
+  --color-warning: var(--color-yellow-1);
+  --color-danger: var(--color-red-1);
+
+  --color-border: var(--color-gray-4);
+  --color-body-background: var(--color-gray-6);
+
+  /* Typography */
+  --color-text: var(--color-gray-1);
+  --color-text-subtle: var(--color-gray-2);
+  --color-text-dark: var(--color-black);
+  --color-text-placeholder: var(--color-gray-3);
+  --color-link: var(--color-text);
+  --color-link-visited: var(--color-text);
+
+  /* Definitions for forms and other elements */
+  /* Social media colors  */
+  --color-linkedin: #0077B5;
+  --color-github: #6E5494;
+  --color-dribbble: #c142a0;
+  --color-twitter: #1DA1F2;
+}

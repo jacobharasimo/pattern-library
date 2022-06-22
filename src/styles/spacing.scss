@@ -1,0 +1,19 @@
+:root {
+  --space-unit: 0.5rem; /* 8px at 16px base */
+
+  --space-xs: calc(0.5 * var(--space-unit)); /* 4px at 16px base */
+  --space-sm: var(--space-unit); /* 8px at 16px base */
+  --space-md: calc(2 * var(--space-unit)); /* 16px at 16px base */
+  --space-lg: calc(3 * var(--space-unit)); /* 24px at 16px base */
+  --space-xl: calc(4 * var(--space-unit)); /* 32px at 16px base */
+  --space-xxl: calc(5 * var(--space-unit)); /* 40px at 16px base */
+
+  /* Default component padding */
+  --component-padding: var(--space-sm);
+  --component-padding-big: var(--space-md);
+
+  @media (min-width: 480px) {
+    --component-padding: var(--space-md);
+    --component-padding-big: var(--space-xl);
+  }
+}

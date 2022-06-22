@@ -1,0 +1,17 @@
+:root {
+  /* Border Radius */
+  --border-radius: 4px;
+
+  /* Box Shadows */
+  /* x-low depth */
+  --shadow-xs: 0px 1px 0px rgba(0, 0, 0, 0.06);
+  /* low depth */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 8px rgba(0, 0, 0, 0.1);
+  /* medium depth */
+  --shadow-md: 0 1px 8px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(0, 0, 0, 0.15);
+  /* high depth */
+  --shadow-lg: 0 1px 8px rgba(0, 0, 0, 0.1), 0 16px 48px rgba(0, 0, 0, 0.1),
+    0 24px 60px rgba(0, 0, 0, 0.1);
+  /* error shadow */
+  --shadow-error: 0px 0px 4px rgba(247, 64, 82, 0.3);
+}

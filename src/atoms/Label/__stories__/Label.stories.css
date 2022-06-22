@@ -1,0 +1,14 @@
+.Storybook__Progress {
+  margin: 10px 10px;
+  margin-left: 30px;
+}
+
+.LabelOverview__componentSection {
+  padding: 10px 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--color-border);
+  margin: 25px 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.075);
+  border-radius: 5px;
+}

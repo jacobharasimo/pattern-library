@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label Component renders with custom colors 1`] = `
+<div>
+  <div
+    class="sc-dkPtRN hhJYCy"
+  />
+</div>
+`;
+
+exports[`Label Component renders with snapshot 1`] = `
+<div>
+  <div
+    class="sc-dkPtRN UyQjG"
+  >
+    Test label
+  </div>
+</div>
+`;

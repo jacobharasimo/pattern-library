@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Vouch Component can collapse 1`] = `
+<div>
+  <div
+    class="Vouch Vouch--md"
+  >
+    <div
+      class="sc-bdvvtL jpWWuL"
+      width="40px,56px"
+    >
+      <div
+        class="sc-bdvvtL sc-gsDKAQ fTpqQL eXKIQs"
+        data-testid="profile-picture"
+      >
+        <img
+          alt=""
+          class="sc-bdvvtL gyfPuV"
+          data-testid="image"
+          src="https://cdn.filepicker.io/api/file/J3xt1hPrT5KZeCuXWUDa"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Vouch Component can collapse 2`] = `
+<div>
+  <div
+    class="Vouch Vouch--md"
+  >
+    <div
+      class="sc-bdvvtL jpWWuL"
+      width="40px,56px"
+    >
+      <div
+        class="sc-bdvvtL sc-gsDKAQ fTpqQL eXKIQs"
+        data-testid="profile-picture"
+      >
+        <img
+          alt=""
+          class="sc-bdvvtL gyfPuV"
+          data-testid="image"
+          src="https://cdn.filepicker.io/api/file/J3xt1hPrT5KZeCuXWUDa"
+        />
+      </div>
+    </div>
+    <div
+      class="Vouch__main"
+    >
+      <h4
+        class="Vouch__name"
+      />
+      <p
+        class="Vouch__score"
+      >
+        High confidence personally and professionally, plus, I would bet my career on them
+      </p>
+      <p
+        class="Vouch__text text-hyphenate"
+      />
+    </div>
+  </div>
+</div>
+`;

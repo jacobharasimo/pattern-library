@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BoxSection renders 1`] = `
+<div>
+  <div
+    aria-labelledby="radio-button-group"
+    class="sc-bdvvtL sc-gsDKAQ hwjEUX eXKIQs"
+    role="radiogroup"
+    width="1"
+  >
+    <div
+      class="sc-bdvvtL LkgAr"
+      id="radio-button-group"
+      width="1,0.25"
+    >
+      Radio button group
+    </div>
+    <div
+      class="sc-bdvvtL jHrIyH"
+      width="1,0.75"
+    >
+      <div
+        class="sc-bdvvtL sc-gsDKAQ hwjEUX eXKIQs"
+        width="1"
+      >
+        <div
+          class="sc-bdvvtL hKbSyD"
+          width="1"
+        >
+          <label
+            class="sc-bdvvtL vjgLu"
+          >
+            <input
+              checked=""
+              field="[object Object]"
+              form="[object Object]"
+              type="radio"
+              value="1"
+            />
+            <span
+              class="sc-bdvvtL fWvKsn"
+            />
+            Option 1
+          </label>
+        </div>
+        <div
+          class="sc-bdvvtL hKbSyD"
+          width="1"
+        >
+          <label
+            class="sc-bdvvtL vjgLu"
+          >
+            <input
+              field="[object Object]"
+              form="[object Object]"
+              type="radio"
+              value="2"
+            />
+            <span
+              class="sc-bdvvtL dAcXPe"
+            />
+            Option 2
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

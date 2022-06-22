@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio Component renders checked 1`] = `
+<div>
+  <label
+    class="sc-bdvvtL vjgLu"
+  >
+    <input
+      checked=""
+      type="radio"
+    />
+    <span
+      class="sc-bdvvtL fWvKsn"
+    />
+    Monday
+  </label>
+</div>
+`;
+
+exports[`Radio Component renders correctly 1`] = `
+<div>
+  <label
+    class="sc-bdvvtL vjgLu"
+  >
+    <input
+      type="radio"
+    />
+    <span
+      class="sc-bdvvtL dAcXPe"
+    />
+    Monday
+  </label>
+</div>
+`;
+
+exports[`Radio Component renders disabled 1`] = `
+<div>
+  <label
+    class="sc-bdvvtL hAUTXI"
+  >
+    <input
+      disabled=""
+      type="radio"
+    />
+    <span
+      class="sc-bdvvtL vpiRh"
+      disabled=""
+    />
+    Monday
+  </label>
+</div>
+`;
+
+exports[`Radio Component renders lg 1`] = `
+<div>
+  <label
+    class="sc-bdvvtL vjgLu"
+  >
+    <input
+      type="radio"
+    />
+    <span
+      class="sc-bdvvtL dAcXPe"
+    />
+    Monday
+  </label>
+</div>
+`;
