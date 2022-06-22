@@ -6,6 +6,7 @@ describe('Rebass Modal', () => {
   let initProps = {};
   beforeEach(() => {
     initProps = {
+      dataTestId: 'test',
       isOpen: true,
       onCancel: jest.fn(),
       title: 'Sample Modal',
@@ -15,7 +16,7 @@ describe('Rebass Modal', () => {
   });
 
   it('renders when open', () => {
-    const { queryByTestId } = render(<Modal {...initProps} />);
+    const { container, queryByTestId } = render(<Modal {...initProps} />);
     expect(queryByTestId('modal')).not.toBeNull();
   });
 

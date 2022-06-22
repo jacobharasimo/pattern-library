@@ -70,7 +70,8 @@ export const Modal = ({
         />
         <FocusTrap
           focusTrapOptions={{
-            initialFocus: '[data-testid="modal"]',
+            fallbackFocus: '[data-testid="close"]',
+            initialFocus: `[data-testid="${wrapperId}"]`,
             allowOutsideClick: true,
             clickOutsideDeactivates: true,
           }}
