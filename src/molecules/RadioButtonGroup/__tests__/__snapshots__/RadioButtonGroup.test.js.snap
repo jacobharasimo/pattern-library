@@ -4,31 +4,31 @@ exports[`BoxSection renders 1`] = `
 <div>
   <div
     aria-labelledby="radio-button-group"
-    class="sc-bdvvtL sc-gsDKAQ hwjEUX eXKIQs"
+    class="sc-bczRLJ sc-gsnTZi eBZenA hzPtvw"
     role="radiogroup"
     width="1"
   >
     <div
-      class="sc-bdvvtL LkgAr"
+      class="sc-bczRLJ kKZWio"
       id="radio-button-group"
       width="1,0.25"
     >
       Radio button group
     </div>
     <div
-      class="sc-bdvvtL jHrIyH"
+      class="sc-bczRLJ kvyFjs"
       width="1,0.75"
     >
       <div
-        class="sc-bdvvtL sc-gsDKAQ hwjEUX eXKIQs"
+        class="sc-bczRLJ sc-gsnTZi eBZenA hzPtvw"
         width="1"
       >
         <div
-          class="sc-bdvvtL hKbSyD"
+          class="sc-bczRLJ jDCmik"
           width="1"
         >
           <label
-            class="sc-bdvvtL vjgLu"
+            class="sc-bczRLJ gPSiSF"
           >
             <input
               checked=""
@@ -38,17 +38,17 @@ exports[`BoxSection renders 1`] = `
               value="1"
             />
             <span
-              class="sc-bdvvtL fWvKsn"
+              class="sc-bczRLJ glHlOs"
             />
             Option 1
           </label>
         </div>
         <div
-          class="sc-bdvvtL hKbSyD"
+          class="sc-bczRLJ jDCmik"
           width="1"
         >
           <label
-            class="sc-bdvvtL vjgLu"
+            class="sc-bczRLJ gPSiSF"
           >
             <input
               field="[object Object]"
@@ -57,7 +57,7 @@ exports[`BoxSection renders 1`] = `
               value="2"
             />
             <span
-              class="sc-bdvvtL dAcXPe"
+              class="sc-bczRLJ ffCwup"
             />
             Option 2
           </label>

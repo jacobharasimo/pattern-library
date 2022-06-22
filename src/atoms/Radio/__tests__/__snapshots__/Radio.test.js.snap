@@ -3,14 +3,14 @@
 exports[`Radio Component renders checked 1`] = `
 <div>
   <label
-    class="sc-bdvvtL vjgLu"
+    class="sc-bczRLJ gPSiSF"
   >
     <input
       checked=""
       type="radio"
     />
     <span
-      class="sc-bdvvtL fWvKsn"
+      class="sc-bczRLJ glHlOs"
     />
     Monday
   </label>
@@ -20,13 +20,13 @@ exports[`Radio Component renders checked 1`] = `
 exports[`Radio Component renders correctly 1`] = `
 <div>
   <label
-    class="sc-bdvvtL vjgLu"
+    class="sc-bczRLJ gPSiSF"
   >
     <input
       type="radio"
     />
     <span
-      class="sc-bdvvtL dAcXPe"
+      class="sc-bczRLJ ffCwup"
     />
     Monday
   </label>
@@ -36,14 +36,14 @@ exports[`Radio Component renders correctly 1`] = `
 exports[`Radio Component renders disabled 1`] = `
 <div>
   <label
-    class="sc-bdvvtL hAUTXI"
+    class="sc-bczRLJ gZNruX"
   >
     <input
       disabled=""
       type="radio"
     />
     <span
-      class="sc-bdvvtL vpiRh"
+      class="sc-bczRLJ lnEYAS"
       disabled=""
     />
     Monday
@@ -54,13 +54,13 @@ exports[`Radio Component renders disabled 1`] = `
 exports[`Radio Component renders lg 1`] = `
 <div>
   <label
-    class="sc-bdvvtL vjgLu"
+    class="sc-bczRLJ gPSiSF"
   >
     <input
       type="radio"
     />
     <span
-      class="sc-bdvvtL dAcXPe"
+      class="sc-bczRLJ ffCwup"
     />
     Monday
   </label>

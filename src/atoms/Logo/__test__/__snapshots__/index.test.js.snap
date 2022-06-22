@@ -2,7 +2,7 @@
 
 exports[`Logo renders correctly 1`] = `
 <div
-  className="sc-bdvvtL eagvFU"
+  className="sc-bczRLJ bTIuUL"
   color="primary"
 >
   <svg
@@ -38,7 +38,7 @@ exports[`Logo renders correctly 1`] = `
 
 exports[`Logo renders correctly minimal 1`] = `
 <div
-  className="sc-bdvvtL eagvFU"
+  className="sc-bczRLJ bTIuUL"
   color="primary"
 >
   <svg
@@ -68,7 +68,7 @@ exports[`Logo renders correctly minimal 1`] = `
 
 exports[`Logo renders correctly showPoweredBy 1`] = `
 <div
-  className="sc-bdvvtL eagvFU"
+  className="sc-bczRLJ bTIuUL"
   color="primary"
 >
   <svg

@@ -6,16 +6,16 @@ exports[`Vouch Component can collapse 1`] = `
     class="Vouch Vouch--md"
   >
     <div
-      class="sc-bdvvtL jpWWuL"
+      class="sc-bczRLJ liMitg"
       width="40px,56px"
     >
       <div
-        class="sc-bdvvtL sc-gsDKAQ fTpqQL eXKIQs"
+        class="sc-bczRLJ sc-gsnTZi hwGGIs hzPtvw"
         data-testid="profile-picture"
       >
         <img
           alt=""
-          class="sc-bdvvtL gyfPuV"
+          class="sc-bczRLJ cCfzru"
           data-testid="image"
           src="https://cdn.filepicker.io/api/file/J3xt1hPrT5KZeCuXWUDa"
         />
@@ -31,16 +31,16 @@ exports[`Vouch Component can collapse 2`] = `
     class="Vouch Vouch--md"
   >
     <div
-      class="sc-bdvvtL jpWWuL"
+      class="sc-bczRLJ liMitg"
       width="40px,56px"
     >
       <div
-        class="sc-bdvvtL sc-gsDKAQ fTpqQL eXKIQs"
+        class="sc-bczRLJ sc-gsnTZi hwGGIs hzPtvw"
         data-testid="profile-picture"
       >
         <img
           alt=""
-          class="sc-bdvvtL gyfPuV"
+          class="sc-bczRLJ cCfzru"
           data-testid="image"
           src="https://cdn.filepicker.io/api/file/J3xt1hPrT5KZeCuXWUDa"
         />

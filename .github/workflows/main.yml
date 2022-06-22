@@ -9,3 +9,7 @@ jobs:
         run: yarn
       - name: Run ESLint:JS
         run: yarn lint:js
+      - name: Run Jest
+        run: yarn test:ci
+      - name: Test build
+        run: yarn build-storybook

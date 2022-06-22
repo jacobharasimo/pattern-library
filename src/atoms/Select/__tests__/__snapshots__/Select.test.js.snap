@@ -3,10 +3,10 @@
 exports[`Select renders 1`] = `
 <div>
   <div
-    class="sc-bdvvtL fThWaO"
+    class="sc-bczRLJ eVdsJd"
   >
     <label
-      class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+      class="sc-bczRLJ sc-gsnTZi eOxCiu hzPtvw"
       for="Select"
     >
       Select me
@@ -41,7 +41,7 @@ exports[`Select renders 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-bdvvtL gbAfkj"
+              class="sc-bczRLJ jITePI"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -72,10 +72,10 @@ exports[`Select renders 1`] = `
 exports[`Select renders lg 1`] = `
 <div>
   <div
-    class="sc-bdvvtL jIHdIB"
+    class="sc-bczRLJ hGycDa"
   >
     <label
-      class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+      class="sc-bczRLJ sc-gsnTZi eOxCiu hzPtvw"
       for="Select"
     >
       Select me
@@ -110,7 +110,7 @@ exports[`Select renders lg 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-bdvvtL gbAfkj"
+              class="sc-bczRLJ jITePI"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -141,10 +141,10 @@ exports[`Select renders lg 1`] = `
 exports[`Select renders multiple selected values 1`] = `
 <div>
   <div
-    class="sc-bdvvtL fThWaO"
+    class="sc-bczRLJ eVdsJd"
   >
     <label
-      class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+      class="sc-bczRLJ sc-gsnTZi eOxCiu hzPtvw"
       for="Select"
     >
       Select me
@@ -179,7 +179,7 @@ exports[`Select renders multiple selected values 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-bdvvtL gbAfkj"
+              class="sc-bczRLJ jITePI"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -204,21 +204,21 @@ exports[`Select renders multiple selected values 1`] = `
       />
     </div>
     <div
-      class="sc-bdvvtL keXViJ"
+      class="sc-bczRLJ bwCkfG"
     >
       <div
-        class="sc-bdvvtL erWBHb"
+        class="sc-bczRLJ iguufo"
         color="text"
         font-weight="body"
       >
         option 1
         <button
-          class="sc-bdvvtL jMBCXr"
+          class="sc-bczRLJ cYDinU"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="sc-bdvvtL bghNvw"
+            class="sc-bczRLJ gYgFqT"
             display="block"
             fill="none"
             height="16px"
@@ -246,18 +246,18 @@ exports[`Select renders multiple selected values 1`] = `
         </button>
       </div>
       <div
-        class="sc-bdvvtL erWBHb"
+        class="sc-bczRLJ iguufo"
         color="text"
         font-weight="body"
       >
         option 2
         <button
-          class="sc-bdvvtL jMBCXr"
+          class="sc-bczRLJ cYDinU"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="sc-bdvvtL bghNvw"
+            class="sc-bczRLJ gYgFqT"
             display="block"
             fill="none"
             height="16px"
@@ -292,10 +292,10 @@ exports[`Select renders multiple selected values 1`] = `
 exports[`Select renders multiple values with option label formatter 1`] = `
 <div>
   <div
-    class="sc-bdvvtL fThWaO"
+    class="sc-bczRLJ eVdsJd"
   >
     <label
-      class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+      class="sc-bczRLJ sc-gsnTZi eOxCiu hzPtvw"
       for="Select"
     >
       Select me
@@ -330,7 +330,7 @@ exports[`Select renders multiple values with option label formatter 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-bdvvtL gbAfkj"
+              class="sc-bczRLJ jITePI"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -361,10 +361,10 @@ exports[`Select renders multiple values with option label formatter 1`] = `
 exports[`Select renders sm 1`] = `
 <div>
   <div
-    class="sc-bdvvtL iutvPe"
+    class="sc-bczRLJ dsvgUh"
   >
     <label
-      class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+      class="sc-bczRLJ sc-gsnTZi eOxCiu hzPtvw"
       for="Select"
     >
       Select me
@@ -399,7 +399,7 @@ exports[`Select renders sm 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-bdvvtL gbAfkj"
+              class="sc-bczRLJ jITePI"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -430,10 +430,10 @@ exports[`Select renders sm 1`] = `
 exports[`Select renders with error 1`] = `
 <div>
   <div
-    class="sc-bdvvtL fThWaO"
+    class="sc-bczRLJ eVdsJd"
   >
     <label
-      class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+      class="sc-bczRLJ sc-gsnTZi eOxCiu hzPtvw"
       for="Select"
     >
       Select me
@@ -468,7 +468,7 @@ exports[`Select renders with error 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-bdvvtL gbAfkj"
+              class="sc-bczRLJ jITePI"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -493,7 +493,7 @@ exports[`Select renders with error 1`] = `
       />
     </div>
     <div
-      class="sc-bdvvtL hQnSTx"
+      class="sc-bczRLJ bivdPi"
       color="danger"
       font-weight="body"
     >
@@ -506,10 +506,10 @@ exports[`Select renders with error 1`] = `
 exports[`Select renders with icon and tooltip in options 1`] = `
 <div>
   <div
-    class="sc-bdvvtL fThWaO"
+    class="sc-bczRLJ eVdsJd"
   >
     <label
-      class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+      class="sc-bczRLJ sc-gsnTZi eOxCiu hzPtvw"
       for="Select"
     >
       Select me
@@ -544,7 +544,7 @@ exports[`Select renders with icon and tooltip in options 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-bdvvtL gbAfkj"
+              class="sc-bczRLJ jITePI"
               fill="none"
               height="24"
               stroke="currentColor"
@@ -575,10 +575,10 @@ exports[`Select renders with icon and tooltip in options 1`] = `
 exports[`Select renders with label 1`] = `
 <div>
   <div
-    class="sc-bdvvtL fThWaO"
+    class="sc-bczRLJ eVdsJd"
   >
     <label
-      class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+      class="sc-bczRLJ sc-gsnTZi eOxCiu hzPtvw"
       for="Select"
     >
       Label
@@ -613,7 +613,7 @@ exports[`Select renders with label 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-bdvvtL gbAfkj"
+              class="sc-bczRLJ jITePI"
               fill="none"
               height="24"
               stroke="currentColor"

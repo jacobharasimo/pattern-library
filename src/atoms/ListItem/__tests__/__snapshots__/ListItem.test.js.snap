@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-bdvvtL erWBHb"
+        class="sc-bczRLJ iguufo"
         color="text"
         font-weight="body"
       >
@@ -16,7 +16,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-bdvvtL erWBHb"
+      class="sc-bczRLJ iguufo"
       color="text"
       font-weight="body"
     >
@@ -83,7 +83,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-bdvvtL blhLRc"
+        class="sc-bczRLJ gjeNuz"
         color="text"
         font-weight="body"
       >
@@ -93,7 +93,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-bdvvtL blhLRc"
+      class="sc-bczRLJ gjeNuz"
       color="text"
       font-weight="body"
     >
@@ -160,18 +160,18 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-bdvvtL erWBHb"
+        class="sc-bczRLJ iguufo"
         color="text"
         font-weight="body"
       >
         <label
-          class="sc-bdvvtL sc-gsDKAQ cBPJGf eXKIQs"
+          class="sc-bczRLJ sc-gsnTZi hnUkrU hzPtvw"
         >
           <div
-            class="sc-bdvvtL sc-gsDKAQ gbAfkj eXKIQs"
+            class="sc-bczRLJ sc-gsnTZi jITePI hzPtvw"
           >
             <input
-              class="sc-bdvvtL gEyULy"
+              class="sc-bczRLJ fnxSqR"
               data-testid="checkbox"
               label="LIST ITEM"
               name=""
@@ -180,7 +180,7 @@ Object {
             />
             <svg
               aria-hidden="true"
-              class="sc-bdvvtL oraVc sc-bdvvtL hhRkLt"
+              class="sc-bczRLJ lofuz sc-bczRLJ hlZSKq"
               data-testid="checkbox-unchecked"
               fill="currentcolor"
               height="16"
@@ -198,7 +198,7 @@ Object {
             </svg>
           </div>
           <div
-            class="sc-bdvvtL UZhRG"
+            class="sc-bczRLJ egCiYZ"
             color="inherit"
           >
             LIST ITEM
@@ -209,18 +209,18 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-bdvvtL erWBHb"
+      class="sc-bczRLJ iguufo"
       color="text"
       font-weight="body"
     >
       <label
-        class="sc-bdvvtL sc-gsDKAQ cBPJGf eXKIQs"
+        class="sc-bczRLJ sc-gsnTZi hnUkrU hzPtvw"
       >
         <div
-          class="sc-bdvvtL sc-gsDKAQ gbAfkj eXKIQs"
+          class="sc-bczRLJ sc-gsnTZi jITePI hzPtvw"
         >
           <input
-            class="sc-bdvvtL gEyULy"
+            class="sc-bczRLJ fnxSqR"
             data-testid="checkbox"
             label="LIST ITEM"
             name=""
@@ -229,7 +229,7 @@ Object {
           />
           <svg
             aria-hidden="true"
-            class="sc-bdvvtL oraVc sc-bdvvtL hhRkLt"
+            class="sc-bczRLJ lofuz sc-bczRLJ hlZSKq"
             data-testid="checkbox-unchecked"
             fill="currentcolor"
             height="16"
@@ -247,7 +247,7 @@ Object {
           </svg>
         </div>
         <div
-          class="sc-bdvvtL UZhRG"
+          class="sc-bczRLJ egCiYZ"
           color="inherit"
         >
           LIST ITEM
@@ -315,7 +315,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-bdvvtL erWBHb"
+        class="sc-bczRLJ iguufo"
         color="text"
         font-weight="body"
       >
@@ -325,7 +325,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-bdvvtL erWBHb"
+      class="sc-bczRLJ iguufo"
       color="text"
       font-weight="body"
     >
@@ -392,21 +392,21 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-bdvvtL erWBHb"
+        class="sc-bczRLJ iguufo"
         color="text"
         font-weight="body"
       >
         <div
-          class="sc-bdvvtL VSXJU"
+          class="sc-bczRLJ VKsgv"
           height="16px"
           width="16px"
         >
           <div
-            class="sc-bdvvtL sc-gsDKAQ fTpqQL eXKIQs"
+            class="sc-bczRLJ sc-gsnTZi hwGGIs hzPtvw"
             data-testid="profile-picture"
           >
             <svg
-              class="sc-bdvvtL cGxOLS"
+              class="sc-bczRLJ iIJWHZ"
               data-testid="text"
               fill="currentColor"
               preserveAspectRatio="xMidYMid meet"
@@ -429,21 +429,21 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-bdvvtL erWBHb"
+      class="sc-bczRLJ iguufo"
       color="text"
       font-weight="body"
     >
       <div
-        class="sc-bdvvtL VSXJU"
+        class="sc-bczRLJ VKsgv"
         height="16px"
         width="16px"
       >
         <div
-          class="sc-bdvvtL sc-gsDKAQ fTpqQL eXKIQs"
+          class="sc-bczRLJ sc-gsnTZi hwGGIs hzPtvw"
           data-testid="profile-picture"
         >
           <svg
-            class="sc-bdvvtL cGxOLS"
+            class="sc-bczRLJ iIJWHZ"
             data-testid="text"
             fill="currentColor"
             preserveAspectRatio="xMidYMid meet"
@@ -523,12 +523,12 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-bdvvtL erWBHb"
+        class="sc-bczRLJ iguufo"
         color="text"
         font-weight="body"
       >
         <div
-          class="sc-bdvvtL sc-gsDKAQ iqbAv eXKIQs"
+          class="sc-bczRLJ sc-gsnTZi iypdrw hzPtvw"
         >
           Ehlo hi
         </div>
@@ -537,12 +537,12 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-bdvvtL erWBHb"
+      class="sc-bczRLJ iguufo"
       color="text"
       font-weight="body"
     >
       <div
-        class="sc-bdvvtL sc-gsDKAQ iqbAv eXKIQs"
+        class="sc-bczRLJ sc-gsnTZi iypdrw hzPtvw"
       >
         Ehlo hi
       </div>

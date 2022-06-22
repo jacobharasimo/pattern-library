@@ -6,10 +6,10 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-bdvvtL lbtVfb"
+        class="sc-bczRLJ eWvHhg"
       >
         <label
-          class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+          class="sc-bczRLJ sc-gsnTZi eOxCiu hzPtvw"
           for="search"
         >
           Search me
@@ -66,10 +66,10 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-bdvvtL lbtVfb"
+      class="sc-bczRLJ eWvHhg"
     >
       <label
-        class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+        class="sc-bczRLJ sc-gsnTZi eOxCiu hzPtvw"
         for="search"
       >
         Search me
@@ -183,10 +183,10 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-bdvvtL lbtVfb"
+        class="sc-bczRLJ eWvHhg"
       >
         <label
-          class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+          class="sc-bczRLJ sc-gsnTZi eOxCiu hzPtvw"
           for="search"
         >
           Search me
@@ -239,21 +239,21 @@ Object {
           />
         </div>
         <div
-          class="sc-bdvvtL cFeCVY"
+          class="sc-bczRLJ dlKeaP"
         >
           <div
-            class="sc-bdvvtL erWBHb"
+            class="sc-bczRLJ iguufo"
             color="text"
             font-weight="body"
           >
             option 1
             <button
-              class="sc-bdvvtL jMBCXr"
+              class="sc-bczRLJ cYDinU"
               type="button"
             >
               <svg
                 aria-hidden="true"
-                class="sc-bdvvtL bghNvw"
+                class="sc-bczRLJ gYgFqT"
                 display="block"
                 fill="none"
                 height="16px"
@@ -281,18 +281,18 @@ Object {
             </button>
           </div>
           <div
-            class="sc-bdvvtL erWBHb"
+            class="sc-bczRLJ iguufo"
             color="text"
             font-weight="body"
           >
             option 2
             <button
-              class="sc-bdvvtL jMBCXr"
+              class="sc-bczRLJ cYDinU"
               type="button"
             >
               <svg
                 aria-hidden="true"
-                class="sc-bdvvtL bghNvw"
+                class="sc-bczRLJ gYgFqT"
                 display="block"
                 fill="none"
                 height="16px"
@@ -325,10 +325,10 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-bdvvtL lbtVfb"
+      class="sc-bczRLJ eWvHhg"
     >
       <label
-        class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+        class="sc-bczRLJ sc-gsnTZi eOxCiu hzPtvw"
         for="search"
       >
         Search me
@@ -381,21 +381,21 @@ Object {
         />
       </div>
       <div
-        class="sc-bdvvtL cFeCVY"
+        class="sc-bczRLJ dlKeaP"
       >
         <div
-          class="sc-bdvvtL erWBHb"
+          class="sc-bczRLJ iguufo"
           color="text"
           font-weight="body"
         >
           option 1
           <button
-            class="sc-bdvvtL jMBCXr"
+            class="sc-bczRLJ cYDinU"
             type="button"
           >
             <svg
               aria-hidden="true"
-              class="sc-bdvvtL bghNvw"
+              class="sc-bczRLJ gYgFqT"
               display="block"
               fill="none"
               height="16px"
@@ -423,18 +423,18 @@ Object {
           </button>
         </div>
         <div
-          class="sc-bdvvtL erWBHb"
+          class="sc-bczRLJ iguufo"
           color="text"
           font-weight="body"
         >
           option 2
           <button
-            class="sc-bdvvtL jMBCXr"
+            class="sc-bczRLJ cYDinU"
             type="button"
           >
             <svg
               aria-hidden="true"
-              class="sc-bdvvtL bghNvw"
+              class="sc-bczRLJ gYgFqT"
               display="block"
               fill="none"
               height="16px"
@@ -524,10 +524,10 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-bdvvtL lbtVfb"
+        class="sc-bczRLJ eWvHhg"
       >
         <label
-          class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+          class="sc-bczRLJ sc-gsnTZi eOxCiu hzPtvw"
           for="search"
         >
           Search me
@@ -580,21 +580,21 @@ Object {
           />
         </div>
         <div
-          class="sc-bdvvtL cFeCVY"
+          class="sc-bczRLJ dlKeaP"
         >
           <div
-            class="sc-bdvvtL erWBHb"
+            class="sc-bczRLJ iguufo"
             color="text"
             font-weight="body"
           >
             Generated label 
             <button
-              class="sc-bdvvtL jMBCXr"
+              class="sc-bczRLJ cYDinU"
               type="button"
             >
               <svg
                 aria-hidden="true"
-                class="sc-bdvvtL bghNvw"
+                class="sc-bczRLJ gYgFqT"
                 display="block"
                 fill="none"
                 height="16px"
@@ -622,18 +622,18 @@ Object {
             </button>
           </div>
           <div
-            class="sc-bdvvtL erWBHb"
+            class="sc-bczRLJ iguufo"
             color="text"
             font-weight="body"
           >
             Generated label 
             <button
-              class="sc-bdvvtL jMBCXr"
+              class="sc-bczRLJ cYDinU"
               type="button"
             >
               <svg
                 aria-hidden="true"
-                class="sc-bdvvtL bghNvw"
+                class="sc-bczRLJ gYgFqT"
                 display="block"
                 fill="none"
                 height="16px"
@@ -666,10 +666,10 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-bdvvtL lbtVfb"
+      class="sc-bczRLJ eWvHhg"
     >
       <label
-        class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+        class="sc-bczRLJ sc-gsnTZi eOxCiu hzPtvw"
         for="search"
       >
         Search me
@@ -722,21 +722,21 @@ Object {
         />
       </div>
       <div
-        class="sc-bdvvtL cFeCVY"
+        class="sc-bczRLJ dlKeaP"
       >
         <div
-          class="sc-bdvvtL erWBHb"
+          class="sc-bczRLJ iguufo"
           color="text"
           font-weight="body"
         >
           Generated label 
           <button
-            class="sc-bdvvtL jMBCXr"
+            class="sc-bczRLJ cYDinU"
             type="button"
           >
             <svg
               aria-hidden="true"
-              class="sc-bdvvtL bghNvw"
+              class="sc-bczRLJ gYgFqT"
               display="block"
               fill="none"
               height="16px"
@@ -764,18 +764,18 @@ Object {
           </button>
         </div>
         <div
-          class="sc-bdvvtL erWBHb"
+          class="sc-bczRLJ iguufo"
           color="text"
           font-weight="body"
         >
           Generated label 
           <button
-            class="sc-bdvvtL jMBCXr"
+            class="sc-bczRLJ cYDinU"
             type="button"
           >
             <svg
               aria-hidden="true"
-              class="sc-bdvvtL bghNvw"
+              class="sc-bczRLJ gYgFqT"
               display="block"
               fill="none"
               height="16px"
@@ -865,10 +865,10 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-bdvvtL lbtVfb"
+        class="sc-bczRLJ eWvHhg"
       >
         <label
-          class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+          class="sc-bczRLJ sc-gsnTZi eOxCiu hzPtvw"
           for="search"
         >
           Label
@@ -925,10 +925,10 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-bdvvtL lbtVfb"
+      class="sc-bczRLJ eWvHhg"
     >
       <label
-        class="sc-bdvvtL sc-gsDKAQ jNrUDF eXKIQs"
+        class="sc-bczRLJ sc-gsnTZi eOxCiu hzPtvw"
         for="search"
       >
         Label

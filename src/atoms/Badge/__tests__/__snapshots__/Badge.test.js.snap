@@ -3,7 +3,7 @@
 exports[`Badge component renders 1`] = `
 <div>
   <div
-    class="sc-bdvvtL cAjLFI"
+    class="sc-bczRLJ ebLpGz"
   >
     9
   </div>
@@ -13,7 +13,7 @@ exports[`Badge component renders 1`] = `
 exports[`Badge component renders in sm size 1`] = `
 <div>
   <div
-    class="sc-bdvvtL ddgyko"
+    class="sc-bczRLJ kskbJv"
   >
     9
   </div>
@@ -23,7 +23,7 @@ exports[`Badge component renders in sm size 1`] = `
 exports[`Badge component renders with className 1`] = `
 <div>
   <div
-    class="sc-bdvvtL cAjLFI test-class"
+    class="sc-bczRLJ ebLpGz test-class"
   >
     9
   </div>

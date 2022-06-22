@@ -3,7 +3,7 @@
 exports[`Label Component renders with custom colors 1`] = `
 <div>
   <div
-    class="sc-dkPtRN hhJYCy"
+    class="sc-dkzDqf eDMmdJ"
   />
 </div>
 `;
@@ -11,7 +11,7 @@ exports[`Label Component renders with custom colors 1`] = `
 exports[`Label Component renders with snapshot 1`] = `
 <div>
   <div
-    class="sc-dkPtRN UyQjG"
+    class="sc-dkzDqf ivUtud"
   >
     Test label
   </div>
