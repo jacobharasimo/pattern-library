@@ -6,7 +6,12 @@ import theme from '../../theme';
 
 export const FormFieldError = ({ error }) => (
   <ThemeProvider theme={theme}>
-    <Text width={1} role="alert" variant="default" sx={{ color: 'danger', mt: 2, fontSize: 1, fontStyle: 'italic' }}>
+    <Text
+      width={1}
+      role="alert"
+      variant="default"
+      sx={{ color: 'danger', mt: 2, fontSize: 1, fontStyle: 'italic' }}
+    >
       {error.toString()}
     </Text>
   </ThemeProvider>

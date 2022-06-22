@@ -2,7 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'rebass/styled-components';
 
-export const LinkDecorator = ({ contentState, entityKey, children, ...props }) => {
+export const LinkDecorator = ({
+  contentState,
+  entityKey,
+  children,
+  ...props
+}) => {
   const { url } = contentState.getEntity(entityKey).getData();
 
   return (
@@ -22,7 +27,10 @@ export const LinkDecorator = ({ contentState, entityKey, children, ...props }) =
 const strategy = (block, callback, contentState) => {
   block.findEntityRanges(character => {
     const entityKey = character.getEntity();
-    return entityKey !== null && contentState.getEntity(entityKey).getType() === 'LINK';
+    return (
+      entityKey !== null &&
+      contentState.getEntity(entityKey).getType() === 'LINK'
+    );
   }, callback);
 };
 

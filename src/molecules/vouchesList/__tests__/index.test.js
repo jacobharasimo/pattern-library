@@ -44,7 +44,8 @@ describe('VouchesList Component', () => {
             linkedinUrl: 'https://linkedin.com/in/cmunozgar',
           },
           vouched: {
-            avatarUrl: 'https://cdn.filepicker.io/api/file/J3xt1hPrT5KZeCuXWUDa',
+            avatarUrl:
+              'https://cdn.filepicker.io/api/file/J3xt1hPrT5KZeCuXWUDa',
             bio: 'CEO at Monday.vc // Passionate about helping people find meaningful work.',
             email: 'evan@monday.vc',
             firstName: 'Evan',

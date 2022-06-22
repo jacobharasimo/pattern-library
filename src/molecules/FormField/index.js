@@ -18,7 +18,18 @@ const getComponent = as => {
   }
 };
 
-const FormField = ({ optional, optionalText, as, className, field, form, label, onChange, size, ...rest }) => {
+const FormField = ({
+  optional,
+  optionalText,
+  as,
+  className,
+  field,
+  form,
+  label,
+  onChange,
+  size,
+  ...rest
+}) => {
   const error = !!(form && form.touched[field.name] && form.errors[field.name]);
   const Component = getComponent(as);
 
@@ -39,7 +50,14 @@ const FormField = ({ optional, optionalText, as, className, field, form, label, 
           {label}
           &nbsp;
           {optional && (
-            <Text as="span" sx={{ color: 'textSubtle', fontStyle: 'italic', fontWeight: 'normal' }}>
+            <Text
+              as="span"
+              sx={{
+                color: 'textSubtle',
+                fontStyle: 'italic',
+                fontWeight: 'normal',
+              }}
+            >
               {optionalText}
             </Text>
           )}
@@ -53,7 +71,14 @@ const FormField = ({ optional, optionalText, as, className, field, form, label, 
   return (
     <Box sx={{ ':not(:last-child)': { mb: 3 } }}>
       {label && renderLabel()}
-      <Component error={error} id={field.id || field.name} size={size} onChange={handleOnChange} {...field} {...rest} />
+      <Component
+        error={error}
+        id={field.id || field.name}
+        size={size}
+        onChange={handleOnChange}
+        {...field}
+        {...rest}
+      />
       {error && <FormFieldError error={form.errors[field.name]} />}
     </Box>
   );

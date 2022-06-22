@@ -4,7 +4,16 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import theme from '../../theme';
 
-const TextArea = ({ className, error, onChange, placeholder, rows, size, value, ...rebassProps }) => {
+const TextArea = ({
+  className,
+  error,
+  onChange,
+  placeholder,
+  rows,
+  size,
+  value,
+  ...rebassProps
+}) => {
   const getVariant = () => {
     switch (size) {
       case 'lg':

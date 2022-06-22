@@ -9,12 +9,23 @@ import theme from '../../theme';
 import { LoadingSpinner } from '../loadingSpinner';
 
 export const Checkbox = props => {
-  const { loadingVariant, checkboxVariant, label, isLoading, disabled, checked } = props;
+  const {
+    loadingVariant,
+    checkboxVariant,
+    label,
+    isLoading,
+    disabled,
+    checked,
+  } = props;
   if (Object.prototype.hasOwnProperty.call(props, 'toggle')) {
-    throw new Error("pointing to legacy checkbox, use 'Toggle' component instead");
+    throw new Error(
+      "pointing to legacy checkbox, use 'Toggle' component instead",
+    );
   }
   if (Object.prototype.hasOwnProperty.call(props, 'size')) {
-    throw new Error('pointing to legacy checkbox, check the component definition in Rombo');
+    throw new Error(
+      'pointing to legacy checkbox, check the component definition in Rombo',
+    );
   }
   return (
     <ThemeProvider theme={theme}>
@@ -38,7 +49,11 @@ export const Checkbox = props => {
           />
         )}
         {label && (
-          <Text flex={1} sx={{ lineHeight: '1.1' }} color={disabled ? 'textSubtle' : 'inherit'}>
+          <Text
+            flex={1}
+            sx={{ lineHeight: '1.1' }}
+            color={disabled ? 'textSubtle' : 'inherit'}
+          >
             {label}
           </Text>
         )}
@@ -48,7 +63,10 @@ export const Checkbox = props => {
 };
 
 Checkbox.propTypes = {
-  label: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+  label: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
   onChange: PropTypes.func,
   isLoading: PropTypes.bool,
   disabled: PropTypes.bool,

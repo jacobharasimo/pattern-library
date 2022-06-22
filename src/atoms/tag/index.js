@@ -8,9 +8,24 @@ export const Tag = props => {
   const { variant, canRemove, children } = props;
   return (
     <ThemeProvider theme={theme}>
-      <Button tx="tag" data-testid="tag" disabled={!canRemove} {...props} variant={variant}>
+      <Button
+        tx="tag"
+        data-testid="tag"
+        disabled={!canRemove}
+        {...props}
+        variant={variant}
+      >
         {children}
-        {canRemove && <Box data-item="close-icon" height="1em" width="1em" strokeWidth="1.5" as={X} ml={2} />}
+        {canRemove && (
+          <Box
+            data-item="close-icon"
+            height="1em"
+            width="1em"
+            strokeWidth="1.5"
+            as={X}
+            ml={2}
+          />
+        )}
       </Button>
     </ThemeProvider>
   );
@@ -18,7 +33,10 @@ export const Tag = props => {
 
 Tag.propTypes = {
   canRemove: PropTypes.bool,
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
   variant: PropTypes.string,
 };
 

@@ -14,7 +14,14 @@ export const Vouch = ({
   collapsed,
   userId,
 }) => {
-  const { id, voucher = {}, vouched = {}, relationshipLevel, relationshipText, score } = vouch;
+  const {
+    id,
+    voucher = {},
+    vouched = {},
+    relationshipLevel,
+    relationshipText,
+    score,
+  } = vouch;
   let user = vouched;
 
   if (show === 'voucher') {
@@ -28,7 +35,10 @@ export const Vouch = ({
 
   let relationshipString = null;
 
-  if (relationshipLevel > 0 && relationshipLevel <= Object.keys(relationshipLevelOptions).length) {
+  if (
+    relationshipLevel > 0 &&
+    relationshipLevel <= Object.keys(relationshipLevelOptions).length
+  ) {
     relationshipString = relationshipLevelOptions[relationshipLevel].replace(
       '[Member Name]',
       vouched && vouched.firstName ? vouched.firstName : 'this person',
@@ -39,7 +49,11 @@ export const Vouch = ({
     return (
       <div key={id} className={`Vouch Vouch--${size}`}>
         <Box width={['40px', '56px']}>
-          <ProfilePicture imageUrl={user.avatarUrl} name={getUserDisplayName(user)} verified={user.verified} />
+          <ProfilePicture
+            imageUrl={user.avatarUrl}
+            name={getUserDisplayName(user)}
+            verified={user.verified}
+          />
         </Box>
       </div>
     );
@@ -52,12 +66,18 @@ export const Vouch = ({
   return (
     <div key={id} className={`Vouch Vouch--${size}`}>
       <Box width={['40px', '56px']}>
-        <ProfilePicture imageUrl={user.avatarUrl} name={displayName} verified={user.verified} />
+        <ProfilePicture
+          imageUrl={user.avatarUrl}
+          name={displayName}
+          verified={user.verified}
+        />
       </Box>
       <div className="Vouch__main">
         <h4 className="Vouch__name">{displayName}</h4>
         {scoreString && <p className="Vouch__score">{scoreString}</p>}
-        {relationshipString && <p className="Vouch__score">{relationshipString}</p>}
+        {relationshipString && (
+          <p className="Vouch__score">{relationshipString}</p>
+        )}
         <p className="Vouch__text text-hyphenate">{relationshipText}</p>
       </div>
     </div>

@@ -12,13 +12,17 @@ describe('Dropdown', () => {
     };
   });
   it('renders the trigger', () => {
-    const { container, queryByTestId } = render(<Dropdown {...initProps}>Test Content</Dropdown>);
+    const { container, queryByTestId } = render(
+      <Dropdown {...initProps}>Test Content</Dropdown>,
+    );
     expect(container).not.toBeNull();
     expect(queryByTestId('dropdown-trigger')).not.toBeNull();
     expect(queryByTestId('dropdown_content')).toBeNull();
   });
   it('renders the dropdown when triggered', async () => {
-    const { container, queryByTestId } = render(<Dropdown {...initProps}>Test Content</Dropdown>);
+    const { container, queryByTestId } = render(
+      <Dropdown {...initProps}>Test Content</Dropdown>,
+    );
     expect(container).not.toBeNull();
     expect(queryByTestId('dropdown-trigger')).not.toBeNull();
     const trigger = queryByTestId('dropdown-trigger');
@@ -29,7 +33,9 @@ describe('Dropdown', () => {
     });
   });
   it('escape key closes the dropdown', async () => {
-    const { container, queryByTestId } = render(<Dropdown {...initProps}>Test Content</Dropdown>);
+    const { container, queryByTestId } = render(
+      <Dropdown {...initProps}>Test Content</Dropdown>,
+    );
     expect(container).not.toBeNull();
     expect(queryByTestId('dropdown-trigger')).not.toBeNull();
     const trigger = queryByTestId('dropdown-trigger');
@@ -38,13 +44,19 @@ describe('Dropdown', () => {
     await waitFor(() => {
       expect(queryByTestId('dropdown-content')).not.toBeNull();
     });
-    fireEvent.keyDown(container, { key: 'Escape', code: 'Escape', charCode: 27 });
+    fireEvent.keyDown(container, {
+      key: 'Escape',
+      code: 'Escape',
+      charCode: 27,
+    });
     await waitFor(() => {
       expect(queryByTestId('dropdown-content')).toBeNull();
     });
   });
   it('can call an onOpen function when open only', async () => {
-    const { container, queryByTestId } = render(<Dropdown {...initProps}>Test Content</Dropdown>);
+    const { container, queryByTestId } = render(
+      <Dropdown {...initProps}>Test Content</Dropdown>,
+    );
     expect(container).not.toBeNull();
     expect(initProps.onClose).not.toHaveBeenCalled();
     expect(queryByTestId('dropdown-trigger')).not.toBeNull();
@@ -59,7 +71,9 @@ describe('Dropdown', () => {
   });
   it('can call an onClose function when open only', async () => {
     initProps.interactive = false;
-    const { container, queryByTestId, queryByText } = render(<Dropdown {...initProps}>Test Content</Dropdown>);
+    const { container, queryByTestId, queryByText } = render(
+      <Dropdown {...initProps}>Test Content</Dropdown>,
+    );
     expect(container).not.toBeNull();
     expect(queryByTestId('dropdown-trigger')).not.toBeNull();
     expect(initProps.onClose).not.toHaveBeenCalled();

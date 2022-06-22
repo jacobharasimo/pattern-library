@@ -1,4 +1,9 @@
-import React, { forwardRef, useEffect, useImperativeHandle, useState } from 'react';
+import React, {
+  forwardRef,
+  useEffect,
+  useImperativeHandle,
+  useState,
+} from 'react';
 import { Flex, Box, Button } from 'rebass/styled-components';
 import PropTypes from 'prop-types';
 import { usePopperTooltip } from 'react-popper-tooltip';
@@ -28,16 +33,17 @@ export const Dropdown = forwardRef(
   ) => {
     const [controlledVisible, setControlledVisible] = useState(false);
 
-    const { getTooltipProps, setTooltipRef, setTriggerRef, visible } = usePopperTooltip({
-      ...popperConfig,
-      trigger,
-      offset,
-      visible: controlledVisible,
-      onVisibleChange: setControlledVisible,
-      interactive,
-      placement,
-      delayHide,
-    });
+    const { getTooltipProps, setTooltipRef, setTriggerRef, visible } =
+      usePopperTooltip({
+        ...popperConfig,
+        trigger,
+        offset,
+        visible: controlledVisible,
+        onVisibleChange: setControlledVisible,
+        interactive,
+        placement,
+        delayHide,
+      });
 
     const previousVisibility = usePrevious(controlledVisible);
 
@@ -88,7 +94,12 @@ export const Dropdown = forwardRef(
     return (
       <ThemeProvider theme={theme}>
         <Flex ref={ref} data-testid="dropdown" {...rebassProps}>
-          <Button data-testid="dropdown-trigger" ref={setTriggerRef} data-is-open={visible} {...triggerProps}>
+          <Button
+            data-testid="dropdown-trigger"
+            ref={setTriggerRef}
+            data-is-open={visible}
+            {...triggerProps}
+          >
             {triggerProps.children}
           </Button>
           {visible && (
@@ -122,7 +133,10 @@ Dropdown.propTypes = {
     onVisibleChange: PropTypes.bool,
     visible: PropTypes.bool,
   }),
-  trigger: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
+  trigger: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string),
+  ]),
   interactive: PropTypes.bool,
   placement: PropTypes.oneOf([
     'auto',
@@ -144,14 +158,20 @@ Dropdown.propTypes = {
   offset: PropTypes.arrayOf(PropTypes.number),
   onOpen: PropTypes.func,
   onClose: PropTypes.func,
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node, PropTypes.string]).isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]).isRequired,
   dropDownProps: PropTypes.object,
   delayHide: PropTypes.number,
 };
 
 Dropdown.defaultProps = {
   triggerProps: {
-    children: <Box height="16px" width="auto" as={MoreHorizontal} strokeWidth="1.5" />,
+    children: (
+      <Box height="16px" width="auto" as={MoreHorizontal} strokeWidth="1.5" />
+    ),
     variant: 'primary',
   },
   onOpen: null,

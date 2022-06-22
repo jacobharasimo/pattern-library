@@ -10,7 +10,9 @@ const FormikTextEditor = props => {
   return (
     <>
       <TextEditor {...field} {...props} onChange={value => setValue(value)} />
-      {meta.touched && meta.error ? <FormFieldError error={meta.error} /> : null}
+      {meta.touched && meta.error ? (
+        <FormFieldError error={meta.error} />
+      ) : null}
     </>
   );
 };

@@ -6,10 +6,23 @@ import { HelpCircle } from 'react-feather';
 import { ThemeProvider } from 'styled-components';
 import theme from '../../theme';
 
-export const Popper = ({ popperConfig, children, popover, triggerProps, containerProps, ...rebassProps }) => {
+export const Popper = ({
+  popperConfig,
+  children,
+  popover,
+  triggerProps,
+  containerProps,
+  ...rebassProps
+}) => {
   const [controlledVisible, setControlledVisible] = React.useState(false);
 
-  const { getArrowProps, getTooltipProps, setTooltipRef, setTriggerRef, visible } = usePopperTooltip({
+  const {
+    getArrowProps,
+    getTooltipProps,
+    setTooltipRef,
+    setTriggerRef,
+    visible,
+  } = usePopperTooltip({
     ...{ trigger: ['hover', 'focus'] },
     visible: controlledVisible,
     onVisibleChange: setControlledVisible,
@@ -34,7 +47,13 @@ export const Popper = ({ popperConfig, children, popover, triggerProps, containe
   return (
     <ThemeProvider theme={theme}>
       <Flex tx="popover" data-testid="popover" {...rebassProps}>
-        <Button data-testid="popover-trigger" tx="popover" variant="trigger" ref={setTriggerRef} {...triggerProps}>
+        <Button
+          data-testid="popover-trigger"
+          tx="popover"
+          variant="trigger"
+          ref={setTriggerRef}
+          {...triggerProps}
+        >
           {children}
         </Button>
         {visible && (
@@ -46,7 +65,11 @@ export const Popper = ({ popperConfig, children, popover, triggerProps, containe
             {...getTooltipProps({ className: 'tooltip-container' })}
             {...containerProps}
           >
-            <Box tx="popover" variant="arrow" {...getArrowProps({ className: 'tooltip-arrow' })} />
+            <Box
+              tx="popover"
+              variant="arrow"
+              {...getArrowProps({ className: 'tooltip-arrow' })}
+            />
             {popover}
           </Box>
         )}
@@ -58,7 +81,10 @@ export const Popper = ({ popperConfig, children, popover, triggerProps, containe
 Popper.propTypes = {
   triggerProps: PropTypes.object,
   containerProps: PropTypes.object,
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
   header: PropTypes.string,
   popperConfig: PropTypes.shape({
     closeOnOutsideClick: PropTypes.bool,
@@ -88,10 +114,17 @@ Popper.propTypes = {
       'left-start',
       'left-end',
     ]),
-    trigger: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
+    trigger: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.arrayOf(PropTypes.string),
+    ]),
     visible: PropTypes.bool,
   }),
-  popover: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node, PropTypes.string]).isRequired,
+  popover: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]).isRequired,
 };
 
 Popper.defaultProps = {
@@ -99,5 +132,7 @@ Popper.defaultProps = {
   containerProps: {},
   header: '',
   popperConfig: {},
-  children: <Box height="24px" width="auto" as={HelpCircle} strokeWidth="1.5" />,
+  children: (
+    <Box height="24px" width="auto" as={HelpCircle} strokeWidth="1.5" />
+  ),
 };

@@ -5,7 +5,14 @@ import { ThemeProvider } from 'styled-components';
 import Popover from '../../atoms/Popover';
 import theme from '../../theme';
 
-export const Tooltip = ({ position, dark, children, popover, triggerProps, popoverProps }) => (
+export const Tooltip = ({
+  position,
+  dark,
+  children,
+  popover,
+  triggerProps,
+  popoverProps,
+}) => (
   <ThemeProvider theme={theme}>
     <Box
       as={Popover}
@@ -33,8 +40,14 @@ export const Tooltip = ({ position, dark, children, popover, triggerProps, popov
 );
 
 Tooltip.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
-  popover: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+  popover: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
   dark: PropTypes.bool,
   position: PropTypes.string,
   triggerProps: PropTypes.object,

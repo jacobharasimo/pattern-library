@@ -16,7 +16,14 @@ const FormikTextArea = ({ label, optionalText, ...props }) => {
           {label}
           &nbsp;
           {optionalText && (
-            <Text as="span" sx={{ color: 'textSubtle', fontStyle: 'italic', fontWeight: 'normal' }}>
+            <Text
+              as="span"
+              sx={{
+                color: 'textSubtle',
+                fontStyle: 'italic',
+                fontWeight: 'normal',
+              }}
+            >
               {optionalText}
             </Text>
           )}
@@ -32,7 +39,9 @@ const FormikTextArea = ({ label, optionalText, ...props }) => {
       {renderedLabel}
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <TextArea {...field} {...props} name={name} id={id} />
-      {meta.touched && meta.error ? <FormFieldError error={meta.error} /> : null}
+      {meta.touched && meta.error ? (
+        <FormFieldError error={meta.error} />
+      ) : null}
     </Box>
   );
 };

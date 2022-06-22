@@ -6,7 +6,9 @@ import Select from 'react-select';
 import baseTheme from '../../theme';
 import { FormFieldError } from '../../atoms/formFieldError';
 
-const renderLabelDefault = ({ label }) => <Text data-testid="default-option-item">{label}</Text>;
+const renderLabelDefault = ({ label }) => (
+  <Text data-testid="default-option-item">{label}</Text>
+);
 
 const ReduxSelect = props => {
   const { theme, isMulti, optionsMessage, noResultsMessage, error } = props;
@@ -46,19 +48,24 @@ const ReduxSelect = props => {
         paddingBottom: state.theme.space[2],
         paddingLeft: state.theme.space[3],
         paddingRight: state.theme.space[3],
-        background: state.isFocused ? state.theme.colors.gray[3] : 'transparent',
+        background: state.isFocused
+          ? state.theme.colors.gray[3]
+          : 'transparent',
       }),
       control: (provided, state) => ({
         backgroundColor: state.theme.colors.neutral[0],
         borderRadius: state.theme.borderRadius,
         borderStyle: 'solid',
         borderWidth: '1px',
-        borderColor: state.isFocused ? state.theme.colors.blue[600] : state.theme.colors.gray[2],
+        borderColor: state.isFocused
+          ? state.theme.colors.blue[600]
+          : state.theme.colors.gray[2],
       }),
       menu: (provided, state) => ({
         ...provided,
         background: state.theme.colors.neutral[0],
-        boxShadow: '0 1px 8px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(0, 0, 0, 0.15)',
+        boxShadow:
+          '0 1px 8px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(0, 0, 0, 0.15)',
         borderRadius: state.theme.borderRadius,
         marginBottom: state.theme.space[2],
         marginTop: state.theme.space[2],
@@ -99,8 +106,13 @@ const ReduxSelect = props => {
 ReduxSelect.propTypes = {
   theme: PropTypes.object,
   formatOptionLabel: PropTypes.func,
-  defaultValue: PropTypes.oneOf([PropTypes.object, PropTypes.array, PropTypes.string]),
-  value: PropTypes.oneOf([PropTypes.object, PropTypes.array, PropTypes.string]).isRequired,
+  defaultValue: PropTypes.oneOf([
+    PropTypes.object,
+    PropTypes.array,
+    PropTypes.string,
+  ]),
+  value: PropTypes.oneOf([PropTypes.object, PropTypes.array, PropTypes.string])
+    .isRequired,
   optionsMessage: PropTypes.string,
   noResultsMessage: PropTypes.string,
   options: PropTypes.array,

@@ -16,7 +16,13 @@ const MAX_MENU_HEIGHT = 600;
 
 const ClearIndicator = props => (
   <components.DropdownIndicator {...props}>
-    <Box as={X} width="16px" height="16px" strokeWidth="1.5" aria-hidden="true" />
+    <Box
+      as={X}
+      width="16px"
+      height="16px"
+      strokeWidth="1.5"
+      aria-hidden="true"
+    />
   </components.DropdownIndicator>
 );
 

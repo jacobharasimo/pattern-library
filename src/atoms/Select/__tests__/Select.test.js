@@ -53,15 +53,27 @@ describe('Select', () => {
   });
 
   it('renders multiple values with option label formatter', () => {
-    props.customFormatOptionLabel = jest.fn().mockImplementation(() => 'Generated label ');
+    props.customFormatOptionLabel = jest
+      .fn()
+      .mockImplementation(() => 'Generated label ');
     const { container } = render(<Select {...props} />);
     expect(container).toMatchSnapshot();
   });
 
   it('renders with icon and tooltip in options', () => {
     props.options = [
-      { label: 'option 1', value: 'option1', tooltipText: 'Lorem Ipsum dolor', icon: '🎨' },
-      { label: 'option 2', value: 'option2', tooltipText: 'Lorem Ipsum dolor', icon: '🎨' },
+      {
+        label: 'option 1',
+        value: 'option1',
+        tooltipText: 'Lorem Ipsum dolor',
+        icon: '🎨',
+      },
+      {
+        label: 'option 2',
+        value: 'option2',
+        tooltipText: 'Lorem Ipsum dolor',
+        icon: '🎨',
+      },
     ];
     const { container } = render(<Select {...props} />);
     expect(container).toMatchSnapshot();

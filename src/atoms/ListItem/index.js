@@ -75,7 +75,13 @@ const ListItem = ({
               </Box>
             )}
             {checkbox ? (
-              <Checkbox label={content} name={name} value={value} checked={checked} onChange={onChange} />
+              <Checkbox
+                label={content}
+                name={name}
+                value={value}
+                checked={checked}
+                onChange={onChange}
+              />
             ) : (
               content
             )}
@@ -104,7 +110,14 @@ const ListItem = ({
             type="button"
             onClick={onRemove}
           >
-            <Box width="16px" height="16px" as={X} strokeWidth="1.5" aria-hidden="true" display="block" />
+            <Box
+              width="16px"
+              height="16px"
+              as={X}
+              strokeWidth="1.5"
+              aria-hidden="true"
+              display="block"
+            />
           </Button>
         )}
       </Box>

@@ -1,4 +1,9 @@
-import React, { forwardRef, useEffect, useImperativeHandle, useState } from 'react';
+import React, {
+  forwardRef,
+  useEffect,
+  useImperativeHandle,
+  useState,
+} from 'react';
 import PropTypes from 'prop-types';
 import { Box, Flex, Button } from 'rebass/styled-components';
 import { Edit2 } from 'react-feather';
@@ -42,7 +47,11 @@ export const EditPanel = forwardRef(
     // set default button values
     const cancelButtonProps = { variant: 'tertiary', children: 'Cancel' };
     Object.assign(cancelButtonProps, cancelButton);
-    const saveButtonProps = { variant: 'primary', children: 'Save', loading: false };
+    const saveButtonProps = {
+      variant: 'primary',
+      children: 'Save',
+      loading: false,
+    };
     Object.assign(saveButtonProps, saveButton);
 
     const previousLoadingState = usePrevious(saveButton.loading);
@@ -57,9 +66,19 @@ export const EditPanel = forwardRef(
           setIsEditMode(false);
         }
       }
-    }, [errorMessage, saveButton.loading, previousLoadingState, closeEditAfterSave]);
+    }, [
+      errorMessage,
+      saveButton.loading,
+      previousLoadingState,
+      closeEditAfterSave,
+    ]);
 
-    useImperativeHandle(ref, () => ({ setIsEditMode, isEditMode, renderFooter, headerButtonFunction }));
+    useImperativeHandle(ref, () => ({
+      setIsEditMode,
+      isEditMode,
+      renderFooter,
+      headerButtonFunction,
+    }));
 
     const renderChildren = scope => {
       if (isLoading) {
@@ -78,7 +97,13 @@ export const EditPanel = forwardRef(
       return {
         children: (
           <>
-            <Box width="16px" height="16px" as={Edit2} strokeWidth="1.5" mr={2} />
+            <Box
+              width="16px"
+              height="16px"
+              as={Edit2}
+              strokeWidth="1.5"
+              mr={2}
+            />
             Edit
           </>
         ),
@@ -97,7 +122,11 @@ export const EditPanel = forwardRef(
       }
       if (isEditMode) {
         return (
-          <Flex data-testid="footer-actions" width={[1]} flexDirection={['column']}>
+          <Flex
+            data-testid="footer-actions"
+            width={[1]}
+            flexDirection={['column']}
+          >
             {errorMessage && errorMessage.length && (
               <Box mb={3} width={[1]} as={Message} type="error">
                 {errorMessage}
@@ -129,7 +158,11 @@ export const EditPanel = forwardRef(
 
     return (
       <ThemeProvider theme={theme}>
-        <Panel title={title} headerButton={headerButtonFunction()} footer={renderFooter()}>
+        <Panel
+          title={title}
+          headerButton={headerButtonFunction()}
+          footer={renderFooter()}
+        >
           {renderChildren({ isEditing: isEditMode })}
         </Panel>
       </ThemeProvider>
@@ -147,7 +180,10 @@ EditPanel.propTypes = {
   errorMessage: PropTypes.string,
   saveButton: AsyncButtonSchema.isRequired,
   cancelButton: ButtonSchema.isRequired,
-  footer: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+  footer: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
   initDisplayMode: PropTypes.oneOf(['edit', 'read']),
 };
 

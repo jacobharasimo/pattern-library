@@ -13,32 +13,43 @@ describe('SearchableList', () => {
   });
 
   it('renders the search box', () => {
-    const { container, queryByTestId } = render(<SearchableList {...initProps} />);
+    const { container, queryByTestId } = render(
+      <SearchableList {...initProps} />,
+    );
     expect(container).not.toBeNull();
     expect(queryByTestId('searchable-list-form')).not.toBeNull();
   });
 
   it('renders the error message', () => {
-    const { container, queryByTestId } = render(<SearchableList {...initProps} error="list error" />);
+    const { container, queryByTestId } = render(
+      <SearchableList {...initProps} error="list error" />,
+    );
     expect(container).not.toBeNull();
     expect(queryByTestId('searchable-list-error')).not.toBeNull();
   });
 
   it('does not show create button', () => {
-    const { container, queryByTestId } = render(<SearchableList {...initProps} />);
+    const { container, queryByTestId } = render(
+      <SearchableList {...initProps} />,
+    );
     expect(container).not.toBeNull();
     expect(queryByTestId('create-button')).toBeNull();
   });
 
   it('can show create button', () => {
-    const { container, queryByTestId } = render(<SearchableList {...initProps} showCreate />);
+    const { container, queryByTestId } = render(
+      <SearchableList {...initProps} showCreate />,
+    );
     expect(container).not.toBeNull();
     expect(queryByTestId('create-button')).not.toBeNull();
   });
 
   it('does not show empty state', () => {
     const { container, queryByTestId } = render(
-      <SearchableList {...initProps} emptyState={() => <div data-testid="empty-state">empty state</div>} />,
+      <SearchableList
+        {...initProps}
+        emptyState={() => <div data-testid="empty-state">empty state</div>}
+      />,
     );
     expect(container).not.toBeNull();
     expect(queryByTestId('empty-state')).toBeNull();
@@ -64,7 +75,9 @@ describe('SearchableList', () => {
           { label: 'a', id: 1 },
           { label: 'b', id: 2 },
         ]}
-        itemTemplate={({ id, label }) => <div data-testid={`list-item-${id}`}> {label}</div>}
+        itemTemplate={({ id, label }) => (
+          <div data-testid={`list-item-${id}`}> {label}</div>
+        )}
       />,
     );
     expect(container).not.toBeNull();
@@ -73,7 +86,9 @@ describe('SearchableList', () => {
   });
 
   it('fire onSearchSubmit callback on submit', () => {
-    const { container, queryByTestId } = render(<SearchableList {...initProps} />);
+    const { container, queryByTestId } = render(
+      <SearchableList {...initProps} />,
+    );
     const trigger = queryByTestId('searchable-list-form');
     expect(container).not.toBeNull();
     fireEvent.submit(trigger);
@@ -82,7 +97,9 @@ describe('SearchableList', () => {
   });
 
   it('fire onSearch change', () => {
-    const { container, queryByTestId } = render(<SearchableList {...initProps} />);
+    const { container, queryByTestId } = render(
+      <SearchableList {...initProps} />,
+    );
     const trigger = queryByTestId('searchable-list-input');
     expect(container).not.toBeNull();
     fireEvent.change(trigger, { target: { value: 'word' } });

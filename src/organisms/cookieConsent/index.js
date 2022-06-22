@@ -21,7 +21,9 @@ export const CookieConsent = ({
   setShowCookieModal,
   ...props
 }) => {
-  const [isCookiesAccepted, setIsCookiesAccepted] = useState(!!Cookies.get(consentCookieName));
+  const [isCookiesAccepted, setIsCookiesAccepted] = useState(
+    !!Cookies.get(consentCookieName),
+  );
   const acceptCookie = () => {
     Cookies.set(consentCookieName, true, { expires: cookieDuration });
     setIsCookiesAccepted(true);
@@ -30,8 +32,16 @@ export const CookieConsent = ({
   const showCookieWarning = isCookiesAccepted || !necessaryCookies.items.length;
   const modalActions = useMemo(
     () => (
-      <Flex justifyContent="flex-end" alignItems="baseLine" data-testid="interactive-renew-action-buttons">
-        <Button data-testid="accept-all" variant="primary" onClick={acceptCookie}>
+      <Flex
+        justifyContent="flex-end"
+        alignItems="baseLine"
+        data-testid="interactive-renew-action-buttons"
+      >
+        <Button
+          data-testid="accept-all"
+          variant="primary"
+          onClick={acceptCookie}
+        >
           Accept all
         </Button>
       </Flex>
@@ -42,7 +52,12 @@ export const CookieConsent = ({
   return (
     <ThemeProvider theme={theme}>
       {!showCookieWarning && (
-        <Card data-testid="cookie-consent" tx="cookieConsent" variant="drawer" {...props}>
+        <Card
+          data-testid="cookie-consent"
+          tx="cookieConsent"
+          variant="drawer"
+          {...props}
+        >
           <Text pb={3}>{children}</Text>
           <Flex flexDirection="row" justifyContent="flex-end">
             <Button
@@ -54,7 +69,11 @@ export const CookieConsent = ({
             >
               Cookies details
             </Button>
-            <Button size="small" data-testid="accept-cookies" onClick={acceptCookie}>
+            <Button
+              size="small"
+              data-testid="accept-cookies"
+              onClick={acceptCookie}
+            >
               OK
             </Button>
           </Flex>
@@ -69,20 +88,24 @@ export const CookieConsent = ({
       >
         <Box pb={3} fontSize={0}>
           <Text pb={2}>
-            This website uses cookies and similar technologies, for example, HTML5 localStorage, (hereafter
-            collectively, &ldquo;cookies&rdquo;) to provide this service, as well as to analyze its usage.
+            This website uses cookies and similar technologies, for example,
+            HTML5 localStorage, (hereafter collectively, &ldquo;cookies&rdquo;)
+            to provide this service, as well as to analyze its usage.
           </Text>
           <Text pb={2}>
-            Cookies are small amounts of information stored on the user’s browser by a website they visit. When the user
-            returns to a website, the cookies belonging to that site are sent back to it. This allows the website to
-            &ldquo;remember&rdquo; data about a user between requests or browser sessions.
+            Cookies are small amounts of information stored on the user’s
+            browser by a website they visit. When the user returns to a website,
+            the cookies belonging to that site are sent back to it. This allows
+            the website to &ldquo;remember&rdquo; data about a user between
+            requests or browser sessions.
           </Text>
           <Text pb={2}>
-            Below we categorise the cookies this website stores by their use. You can choose to turn each type on or
-            off.
+            Below we categorise the cookies this website stores by their use.
+            You can choose to turn each type on or off.
           </Text>
           <Text>
-            For more information, and an explanation of some of the terms used here, please see our{' '}
+            For more information, and an explanation of some of the terms used
+            here, please see our{' '}
             <Button
               as="a"
               variant="underlineLink"
@@ -104,10 +127,16 @@ export const CookieConsent = ({
             isOpen={necessaryCookies.isInitOpen}
             title="Strictly Necessary Cookies"
           >
-            <Flex as="ul" flexDirection="column" sx={{ listStyle: 'none' }} p={0}>
+            <Flex
+              as="ul"
+              flexDirection="column"
+              sx={{ listStyle: 'none' }}
+              p={0}
+            >
               <Text mb={2} fontSize={0}>
-                These cookies are used to perform essential functions to enable the website to work properly. Without
-                them, services you’ve asked for can’t be provided. You cannot turn these cookies off.
+                These cookies are used to perform essential functions to enable
+                the website to work properly. Without them, services you’ve
+                asked for can’t be provided. You cannot turn these cookies off.
               </Text>
               {necessaryCookies.items.map(({ checked, name }) => (
                 <Box as="li" key={`necessary_cookies_${name}`}>
@@ -130,7 +159,10 @@ CookieConsent.propTypes = {
   showCookieModal: PropTypes.bool,
   setShowCookieModal: PropTypes.func,
   variant: PropTypes.string,
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
   consentCookieName: PropTypes.string,
   cookieDuration: PropTypes.number,
   necessaryCookies: PropTypes.shape({

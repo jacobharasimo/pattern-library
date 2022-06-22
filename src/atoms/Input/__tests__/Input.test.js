@@ -11,7 +11,9 @@ describe('Input', () => {
 
   it('has a value and a placeholder', () => {
     const placeholder = 'test placeholder';
-    const { queryByPlaceholderText } = render(<Input placeholder={placeholder} value="test" />);
+    const { queryByPlaceholderText } = render(
+      <Input placeholder={placeholder} value="test" />,
+    );
     const searchInput = queryByPlaceholderText(placeholder);
 
     expect(searchInput.value).toBe('test');

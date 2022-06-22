@@ -2,14 +2,24 @@ import React, { useState, useRef, useEffect, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { Box } from 'rebass/styled-components';
 import { ThemeProvider } from 'styled-components';
-import { EditorState, RichUtils, convertToRaw, convertFromRaw, CompositeDecorator } from 'draft-js';
+import {
+  EditorState,
+  RichUtils,
+  convertToRaw,
+  convertFromRaw,
+  CompositeDecorator,
+} from 'draft-js';
 import { draftToMarkdown, markdownToDraft } from 'markdown-draft-js';
 import Editor from '@draft-js-plugins/editor';
 import createLinkPlugin from '@draft-js-plugins/anchor';
-import createToolbarPlugin, { Separator } from '@draft-js-plugins/static-toolbar';
+import createToolbarPlugin, {
+  Separator,
+} from '@draft-js-plugins/static-toolbar';
 import createListPlugin from 'draft-js-list-plugin';
 import createMarkdownShortcutsPlugin from 'draft-js-markdown-shortcuts-plugin';
-import createInlineToolbarPlugin, { Separator as InlineToolbarSeparator } from '@draft-js-plugins/inline-toolbar';
+import createInlineToolbarPlugin, {
+  Separator as InlineToolbarSeparator,
+} from '@draft-js-plugins/inline-toolbar';
 import {
   ItalicButton,
   BoldButton,
@@ -37,7 +47,10 @@ const TextEditor = ({ value, options, onChange }) => {
       return EditorState.createEmpty(customDecorators);
     }
 
-    return EditorState.createWithContent(convertFromRaw(markdownToDraft(value)), customDecorators);
+    return EditorState.createWithContent(
+      convertFromRaw(markdownToDraft(value)),
+      customDecorators,
+    );
   });
 
   const editor = useRef(null);
@@ -55,7 +68,13 @@ const TextEditor = ({ value, options, onChange }) => {
     const markdownShortcutsPlugin = createMarkdownShortcutsPlugin();
 
     return [
-      [listPlugin, toolbarPlugin, inlineToolbarPlugin, linkPlugin, markdownShortcutsPlugin],
+      [
+        listPlugin,
+        toolbarPlugin,
+        inlineToolbarPlugin,
+        linkPlugin,
+        markdownShortcutsPlugin,
+      ],
       linkPlugin.LinkButton,
       toolbarPlugin.Toolbar,
       inlineToolbarPlugin.InlineToolbar,
@@ -135,12 +154,14 @@ const TextEditor = ({ value, options, onChange }) => {
               listStyleType: 'none',
               position: 'relative',
             },
-            '.public-DraftStyleDefault-unorderedListItem.public-DraftStyleDefault-depth0': {
-              listStyleType: 'disc',
-            },
-            '.public-DraftStyleDefault-unorderedListItem.public-DraftStyleDefault-depth1': {
-              listStyleType: 'circle',
-            },
+            '.public-DraftStyleDefault-unorderedListItem.public-DraftStyleDefault-depth0':
+              {
+                listStyleType: 'disc',
+              },
+            '.public-DraftStyleDefault-unorderedListItem.public-DraftStyleDefault-depth1':
+              {
+                listStyleType: 'circle',
+              },
             '.public-DraftStyleDefault-depth0.public-DraftStyleDefault-reset': {
               counterReset: 'ol0',
             },
@@ -156,48 +177,58 @@ const TextEditor = ({ value, options, onChange }) => {
             '.public-DraftStyleDefault-depth4.public-DraftStyleDefault-reset': {
               counterReset: 'ol4',
             },
-            '.public-DraftStyleDefault-depth0.public-DraftStyleDefault-listLTR': {
-              marginLeft: '1.5em',
-            },
-            '.public-DraftStyleDefault-depth1.public-DraftStyleDefault-listLTR': {
-              marginLeft: '3em',
-            },
-            '.public-DraftStyleDefault-depth2.public-DraftStyleDefault-listLTR': {
-              marginLeft: '4.5em',
-            },
-            '.public-DraftStyleDefault-depth3.public-DraftStyleDefault-listLTR': {
-              marginLeft: '6em',
-            },
-            '.public-DraftStyleDefault-depth4.public-DraftStyleDefault-listLTR': {
-              marginLeft: '7.5em',
-            },
-            '.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-listLTR:before': {
-              left: '-36px',
-              position: 'absolute',
-              textAlign: 'right',
-              width: '30px',
-            },
+            '.public-DraftStyleDefault-depth0.public-DraftStyleDefault-listLTR':
+              {
+                marginLeft: '1.5em',
+              },
+            '.public-DraftStyleDefault-depth1.public-DraftStyleDefault-listLTR':
+              {
+                marginLeft: '3em',
+              },
+            '.public-DraftStyleDefault-depth2.public-DraftStyleDefault-listLTR':
+              {
+                marginLeft: '4.5em',
+              },
+            '.public-DraftStyleDefault-depth3.public-DraftStyleDefault-listLTR':
+              {
+                marginLeft: '6em',
+              },
+            '.public-DraftStyleDefault-depth4.public-DraftStyleDefault-listLTR':
+              {
+                marginLeft: '7.5em',
+              },
+            '.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-listLTR:before':
+              {
+                left: '-36px',
+                position: 'absolute',
+                textAlign: 'right',
+                width: '30px',
+              },
             '.public-DraftStyleDefault-orderedListItem:before': {
               content: 'counter(ol0) ". "',
               counterIncrement: 'ol0',
             },
 
-            '.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth1:before': {
-              content: 'counter(ol1, lower-alpha) ". "',
-              counterIncrement: 'ol1',
-            },
-            '.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth2:before': {
-              content: 'counter(ol2, lower-roman) ". "',
-              counterIncrement: 'ol2',
-            },
-            '.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth3:before': {
-              content: 'counter(ol3) ". "',
-              counterIncrement: 'ol3',
-            },
-            '.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth4:before': {
-              content: 'counter(ol4, lower-alpha) ". "',
-              counterIncrement: 'ol4',
-            },
+            '.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth1:before':
+              {
+                content: 'counter(ol1, lower-alpha) ". "',
+                counterIncrement: 'ol1',
+              },
+            '.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth2:before':
+              {
+                content: 'counter(ol2, lower-roman) ". "',
+                counterIncrement: 'ol2',
+              },
+            '.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth3:before':
+              {
+                content: 'counter(ol3) ". "',
+                counterIncrement: 'ol3',
+              },
+            '.public-DraftStyleDefault-orderedListItem.public-DraftStyleDefault-depth4:before':
+              {
+                content: 'counter(ol4, lower-alpha) ". "',
+                counterIncrement: 'ol4',
+              },
           },
         }}
         onClick={focusEditor}
@@ -206,15 +237,29 @@ const TextEditor = ({ value, options, onChange }) => {
         <Toolbar>
           {externalProps => (
             <>
-              {options.indexOf('bold') !== -1 && <BoldButton {...externalProps} />}
-              {options.indexOf('italic') !== -1 && <ItalicButton {...externalProps} />}
+              {options.indexOf('bold') !== -1 && (
+                <BoldButton {...externalProps} />
+              )}
+              {options.indexOf('italic') !== -1 && (
+                <ItalicButton {...externalProps} />
+              )}
               <Separator {...externalProps} />
-              {options.indexOf('h1') !== -1 && <HeadlineOneButton {...externalProps} />}
-              {options.indexOf('h2') !== -1 && <HeadlineTwoButton {...externalProps} />}
-              {options.indexOf('h3') !== -1 && <HeadlineThreeButton {...externalProps} />}
+              {options.indexOf('h1') !== -1 && (
+                <HeadlineOneButton {...externalProps} />
+              )}
+              {options.indexOf('h2') !== -1 && (
+                <HeadlineTwoButton {...externalProps} />
+              )}
+              {options.indexOf('h3') !== -1 && (
+                <HeadlineThreeButton {...externalProps} />
+              )}
               <Separator {...externalProps} />
-              {options.indexOf('list') !== -1 && <UnorderedListButton {...externalProps} />}
-              {options.indexOf('list') !== -1 && <OrderedListButton {...externalProps} />}
+              {options.indexOf('list') !== -1 && (
+                <UnorderedListButton {...externalProps} />
+              )}
+              {options.indexOf('list') !== -1 && (
+                <OrderedListButton {...externalProps} />
+              )}
               {options.indexOf('link') !== -1 && (
                 <>
                   <Separator {...externalProps} />
@@ -236,15 +281,29 @@ const TextEditor = ({ value, options, onChange }) => {
         <InlineToolbar>
           {externalProps => (
             <>
-              {options.indexOf('bold') !== -1 && <BoldButton {...externalProps} />}
-              {options.indexOf('italic') !== -1 && <ItalicButton {...externalProps} />}
+              {options.indexOf('bold') !== -1 && (
+                <BoldButton {...externalProps} />
+              )}
+              {options.indexOf('italic') !== -1 && (
+                <ItalicButton {...externalProps} />
+              )}
               <InlineToolbarSeparator {...externalProps} />
-              {options.indexOf('h1') !== -1 && <HeadlineOneButton {...externalProps} />}
-              {options.indexOf('h2') !== -1 && <HeadlineTwoButton {...externalProps} />}
-              {options.indexOf('h3') !== -1 && <HeadlineThreeButton {...externalProps} />}
+              {options.indexOf('h1') !== -1 && (
+                <HeadlineOneButton {...externalProps} />
+              )}
+              {options.indexOf('h2') !== -1 && (
+                <HeadlineTwoButton {...externalProps} />
+              )}
+              {options.indexOf('h3') !== -1 && (
+                <HeadlineThreeButton {...externalProps} />
+              )}
               <InlineToolbarSeparator {...externalProps} />
-              {options.indexOf('list') !== -1 && <UnorderedListButton {...externalProps} />}
-              {options.indexOf('list') !== -1 && <OrderedListButton {...externalProps} />}
+              {options.indexOf('list') !== -1 && (
+                <UnorderedListButton {...externalProps} />
+              )}
+              {options.indexOf('list') !== -1 && (
+                <OrderedListButton {...externalProps} />
+              )}
               {options.indexOf('link') !== -1 && (
                 <>
                   <InlineToolbarSeparator {...externalProps} />
@@ -261,7 +320,9 @@ const TextEditor = ({ value, options, onChange }) => {
 
 TextEditor.propTypes = {
   onChange: PropTypes.func,
-  options: PropTypes.arrayOf(PropTypes.oneOf(['bold', 'italic', 'h1', 'h2', 'h3', 'list', 'link'])),
+  options: PropTypes.arrayOf(
+    PropTypes.oneOf(['bold', 'italic', 'h1', 'h2', 'h3', 'list', 'link']),
+  ),
   value: PropTypes.string,
 };
 

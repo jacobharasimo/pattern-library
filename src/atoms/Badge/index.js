@@ -29,7 +29,14 @@ const BadgeWrapper = styled.div`
     `}
 `;
 
-const Badge = ({ children, className, size, textColor, backgroundColor, boxShadow }) => (
+const Badge = ({
+  children,
+  className,
+  size,
+  textColor,
+  backgroundColor,
+  boxShadow,
+}) => (
   <BadgeWrapper
     size={size}
     className={className}

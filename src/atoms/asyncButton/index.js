@@ -6,7 +6,10 @@ import theme from '../../theme';
 import { LoadingSpinner } from '../loadingSpinner';
 
 export const AsyncButton = forwardRef(
-  ({ variant, loadingVariant, size, sx, onClick, loading, children, ...rest }, ref) => {
+  (
+    { variant, loadingVariant, size, sx, onClick, loading, children, ...rest },
+    ref,
+  ) => {
     const rebassTheme = useTheme();
     const { buttonSizes = {} } = rebassTheme || {};
     let loaderVariant = loadingVariant;
@@ -62,7 +65,10 @@ export const AsyncButton = forwardRef(
 
 AsyncButton.propTypes = {
   type: PropTypes.oneOf(['button', 'submit']),
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
   variant: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   sx: PropTypes.object,

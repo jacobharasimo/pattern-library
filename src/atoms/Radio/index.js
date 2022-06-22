@@ -4,7 +4,15 @@ import { ThemeProvider } from 'styled-components';
 import { Box } from 'rebass/styled-components';
 import theme from '../../theme';
 
-const Radio = ({ checked, className, disabled, label, onChange, size, ...rest }) => {
+const Radio = ({
+  checked,
+  className,
+  disabled,
+  label,
+  onChange,
+  size,
+  ...rest
+}) => {
   const borderColor = useMemo(() => {
     if (checked) return 'primary';
     if (disabled) return 'neutral.100';
@@ -37,7 +45,13 @@ const Radio = ({ checked, className, disabled, label, onChange, size, ...rest })
         }}
         className={className}
       >
-        <input type="radio" checked={checked} onChange={onChange} disabled={disabled} {...rest} />
+        <input
+          type="radio"
+          checked={checked}
+          onChange={onChange}
+          disabled={disabled}
+          {...rest}
+        />
         <Box
           as="span"
           mr={2}
@@ -60,11 +74,15 @@ const Radio = ({ checked, className, disabled, label, onChange, size, ...rest })
               opacity: checked ? 1 : 0,
               top: '50%',
               left: '50%',
-              width: size === 'lg' ? 'calc(24px - 0.6rem)' : 'calc(16px - 0.5rem)',
-              height: size === 'lg' ? 'calc(24px - 0.6rem)' : 'calc(16px - 0.5rem)',
+              width:
+                size === 'lg' ? 'calc(24px - 0.6rem)' : 'calc(16px - 0.5rem)',
+              height:
+                size === 'lg' ? 'calc(24px - 0.6rem)' : 'calc(16px - 0.5rem)',
               borderRadius: '50%',
               backgroundColor: disabled ? 'neutral.100' : 'primary',
-              transform: checked ? 'scale(1) translate(-50%, -50%)' : 'scale(0) translate(-50%, -50%)',
+              transform: checked
+                ? 'scale(1) translate(-50%, -50%)'
+                : 'scale(0) translate(-50%, -50%)',
               transformOrigin: '0 0',
               transition: 'all ease 0.3s',
             },

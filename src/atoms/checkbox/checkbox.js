@@ -53,16 +53,37 @@ const CheckboxUnchecked = props => (
 // This is setup if design desires we can replace the svg
 const CheckboxDisabledChecked = props => (
   <SVG {...props}>
-    <rect x="0.5" y="0.5" width="15" height="15" rx="2.5" stroke={colors.border} />
-    <path d="M13.3333 4L6 11.3333L2.66667 8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    <rect
+      x="0.5"
+      y="0.5"
+      width="15"
+      height="15"
+      rx="2.5"
+      stroke={colors.border}
+    />
+    <path
+      d="M13.3333 4L6 11.3333L2.66667 8"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </SVG>
 );
 
 const CheckboxIcon = ({ checked, disabled, ...props }) => (
   <>
-    {!checked && <CheckboxUnchecked data-testid="checkbox-unchecked" {...props} />}
-    {checked && !disabled && <CheckboxChecked data-testid="checkbox-checked" {...props} />}
-    {checked && disabled && <CheckboxDisabledChecked data-testid="checkbox-disabled-checked" {...props} />}
+    {!checked && (
+      <CheckboxUnchecked data-testid="checkbox-unchecked" {...props} />
+    )}
+    {checked && !disabled && (
+      <CheckboxChecked data-testid="checkbox-checked" {...props} />
+    )}
+    {checked && disabled && (
+      <CheckboxDisabledChecked
+        data-testid="checkbox-disabled-checked"
+        {...props}
+      />
+    )}
   </>
 );
 CheckboxIcon.propTypes = {
@@ -70,49 +91,54 @@ CheckboxIcon.propTypes = {
   disabled: PropTypes.bool.isRequired,
 };
 
-export const Checkbox = forwardRef(({ checked, className, disabled, sx, variant = 'checkbox', ...props }, ref) => (
-  <Flex>
-    <Box
-      ref={ref}
-      as="input"
-      type="checkbox"
-      disabled={disabled}
-      checked={checked}
-      {...props}
-      sx={{
-        position: 'absolute',
-        opacity: 0,
-        zIndex: -1,
-        width: 1,
-        height: 1,
-        overflow: 'hidden',
-      }}
-    />
-    <Box
-      as={CheckboxIcon}
-      aria-hidden="true"
-      tx="forms"
-      variant={variant}
-      className={className}
-      sx={sx}
-      {...getSystemProps(props)}
-      checked={checked}
-      disabled={disabled}
-      __css={{
-        mr: 2,
-        borderRadius: 4,
-        color: 'gray',
-        'input:checked ~ &': {
-          color: 'primary',
-        },
-        'input:focus ~ &': {
-          color: 'primary',
-          bg: 'highlight',
-        },
-      }}
-    />
-  </Flex>
-));
+export const Checkbox = forwardRef(
+  (
+    { checked, className, disabled, sx, variant = 'checkbox', ...props },
+    ref,
+  ) => (
+    <Flex>
+      <Box
+        ref={ref}
+        as="input"
+        type="checkbox"
+        disabled={disabled}
+        checked={checked}
+        {...props}
+        sx={{
+          position: 'absolute',
+          opacity: 0,
+          zIndex: -1,
+          width: 1,
+          height: 1,
+          overflow: 'hidden',
+        }}
+      />
+      <Box
+        as={CheckboxIcon}
+        aria-hidden="true"
+        tx="forms"
+        variant={variant}
+        className={className}
+        sx={sx}
+        {...getSystemProps(props)}
+        checked={checked}
+        disabled={disabled}
+        __css={{
+          mr: 2,
+          borderRadius: 4,
+          color: 'gray',
+          'input:checked ~ &': {
+            color: 'primary',
+          },
+          'input:focus ~ &': {
+            color: 'primary',
+            bg: 'highlight',
+          },
+        }}
+      />
+    </Flex>
+  ),
+);
 
 Checkbox.propTypes = {
   className: PropTypes.string,

@@ -11,9 +11,23 @@ const ButtonSchema = PropTypes.shape({
   children: PropTypes.node.isRequired,
 });
 
-export const Panel = ({ headerButton, popover, title, children, footer, ...rest }) => (
+export const Panel = ({
+  headerButton,
+  popover,
+  title,
+  children,
+  footer,
+  ...rest
+}) => (
   <ThemeProvider theme={theme}>
-    <Card tx="card" variant="editPanel" width={1} data-testid="edit-box" flexDirection={['column']} {...rest}>
+    <Card
+      tx="card"
+      variant="editPanel"
+      width={1}
+      data-testid="edit-box"
+      flexDirection={['column']}
+      {...rest}
+    >
       {(title || popover) && (
         <Flex
           data-testid="header"
@@ -22,7 +36,13 @@ export const Panel = ({ headerButton, popover, title, children, footer, ...rest 
           sx={{ borderBottom: 1, borderBottomColor: 'neutral.100' }}
           alignItems="center"
         >
-          <Box display="flex" flexDirection="row" flex="1 1" pr={2} alignItems="center">
+          <Box
+            display="flex"
+            flexDirection="row"
+            flex="1 1"
+            pr={2}
+            alignItems="center"
+          >
             {title && (
               <Text fontSize={3} fontWeight="medium" color="textDark">
                 {title}
@@ -30,7 +50,17 @@ export const Panel = ({ headerButton, popover, title, children, footer, ...rest 
             )}
             {popover && (
               <Box color="neutral.400" ml={2}>
-                <Popover trigger={<Box height="24px" width="auto" as={HelpCircle} strokeWidth="1.5" />} {...popover} />
+                <Popover
+                  trigger={
+                    <Box
+                      height="24px"
+                      width="auto"
+                      as={HelpCircle}
+                      strokeWidth="1.5"
+                    />
+                  }
+                  {...popover}
+                />
               </Box>
             )}
           </Box>
@@ -49,7 +79,12 @@ export const Panel = ({ headerButton, popover, title, children, footer, ...rest 
           )}
         </Flex>
       )}
-      <Flex data-testid="content" width={1} alignItems="start" sx={{ position: 'relative' }}>
+      <Flex
+        data-testid="content"
+        width={1}
+        alignItems="start"
+        sx={{ position: 'relative' }}
+      >
         {!title && !popover && headerButton && (
           <Button
             data-testid="content-action"
@@ -66,7 +101,13 @@ export const Panel = ({ headerButton, popover, title, children, footer, ...rest 
           >
             {headerButton.children || (
               <>
-                <Box height="16px" width="auto" as={Edit2} strokeWidth="1.5" mr={2} />
+                <Box
+                  height="16px"
+                  width="auto"
+                  as={Edit2}
+                  strokeWidth="1.5"
+                  mr={2}
+                />
                 Edit
               </>
             )}
@@ -92,9 +133,16 @@ export const Panel = ({ headerButton, popover, title, children, footer, ...rest 
 Panel.propTypes = {
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   children: PropTypes.node.isRequired,
-  popover: PropTypes.shape({ header: PropTypes.string, content: PropTypes.string, trigger: PropTypes.string }),
+  popover: PropTypes.shape({
+    header: PropTypes.string,
+    content: PropTypes.string,
+    trigger: PropTypes.string,
+  }),
   headerButton: ButtonSchema,
-  footer: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+  footer: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 Panel.defaultProps = {

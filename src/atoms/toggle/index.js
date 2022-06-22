@@ -6,15 +6,36 @@ import PropTypes from 'prop-types';
 import theme from '../../theme';
 
 export const Toggle = forwardRef((props, ref) => {
-  const { labelProps, disabled, onChange, size, checked, className, label, sx, variant, ...rest } = props;
-  const labelSx = { width: 'max-content', cursor: 'pointer', ...(labelProps.sx || {}) };
+  const {
+    labelProps,
+    disabled,
+    onChange,
+    size,
+    checked,
+    className,
+    label,
+    sx,
+    variant,
+    ...rest
+  } = props;
+  const labelSx = {
+    width: 'max-content',
+    cursor: 'pointer',
+    ...(labelProps.sx || {}),
+  };
   let labelFlexDirection = 'row';
   if (variant === 'reverse') {
     labelFlexDirection = 'row-reverse';
   }
   return (
     <ThemeProvider theme={theme}>
-      <Label sx={labelSx} alignItems="center" data-testid="toggle" flexDirection={labelFlexDirection} {...labelProps}>
+      <Label
+        sx={labelSx}
+        alignItems="center"
+        data-testid="toggle"
+        flexDirection={labelFlexDirection}
+        {...labelProps}
+      >
         <Box
           data-testid="hidden-input"
           ref={ref}

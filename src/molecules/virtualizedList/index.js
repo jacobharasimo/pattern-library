@@ -6,7 +6,8 @@ import { Flex, Box } from 'rebass/styled-components';
 export const VirtualizedList = ({ items, variant, ...rest }) => {
   const resizeObserverErrorFix = e => {
     if (
-      e.message === 'ResizeObserver loop completed with undelivered notifications.' ||
+      e.message ===
+        'ResizeObserver loop completed with undelivered notifications.' ||
       e.message === 'ResizeObserver loop limit exceeded'
     ) {
       e.stopImmediatePropagation();
@@ -31,7 +32,12 @@ export const VirtualizedList = ({ items, variant, ...rest }) => {
       role="list"
       data-testid="virtualized-list"
       itemContent={(index, listItem) => (
-        <Box role="listitem" tx="virtualizedList" variant={`${variant}.listItem`} {...listItem} />
+        <Box
+          role="listitem"
+          tx="virtualizedList"
+          variant={`${variant}.listItem`}
+          {...listItem}
+        />
       )}
       {...rest}
     />
@@ -40,7 +46,8 @@ export const VirtualizedList = ({ items, variant, ...rest }) => {
 VirtualizedList.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
+      children: PropTypes.oneOfType([PropTypes.node, PropTypes.string])
+        .isRequired,
       sx: PropTypes.object,
     }),
   ),

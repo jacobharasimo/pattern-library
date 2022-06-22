@@ -1,5 +1,13 @@
 import React from 'react';
-import { Dribbble, ExternalLink, FileText, GitHub, Linkedin, Mail, Twitter } from 'react-feather';
+import {
+  Dribbble,
+  ExternalLink,
+  FileText,
+  GitHub,
+  Linkedin,
+  Mail,
+  Twitter,
+} from 'react-feather';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import { Flex, Text, Box, Link } from 'rebass/styled-components';
@@ -39,7 +47,13 @@ const Social = ({
 
   return (
     <ThemeProvider theme={theme}>
-      <Flex as="ul" m={0} p={0} className={className} sx={{ listStyle: 'none', lineHeight: 0 }}>
+      <Flex
+        as="ul"
+        m={0}
+        p={0}
+        className={className}
+        sx={{ listStyle: 'none', lineHeight: 0 }}
+      >
         {angellist && (
           <Box as="li" tx="social" variant="listItem" data-testid="anglelist">
             <Link
@@ -74,7 +88,13 @@ const Social = ({
               rel="noopener noreferrer"
               onClick={e => handleClick(e, 'email')}
             >
-              <Box as={Mail} tx="social" variant="icon" strokeWidth="1.5" aria-hidden="true" />
+              <Box
+                as={Mail}
+                tx="social"
+                variant="icon"
+                strokeWidth="1.5"
+                aria-hidden="true"
+              />
               <Text variant={isSmall ? 'srOnly' : ''}>{email}</Text>
             </Link>
           </Box>
@@ -90,7 +110,13 @@ const Social = ({
               rel="noopener noreferrer"
               onClick={e => handleClick(e, 'linkedin')}
             >
-              <Box as={Linkedin} tx="social" variant="icon" strokeWidth="1.5" aria-hidden="true" />
+              <Box
+                as={Linkedin}
+                tx="social"
+                variant="icon"
+                strokeWidth="1.5"
+                aria-hidden="true"
+              />
               <Text variant={isSmall ? 'srOnly' : ''}>LinkedIn</Text>
             </Link>
           </Box>
@@ -106,7 +132,13 @@ const Social = ({
               rel="noopener noreferrer"
               onClick={e => handleClick(e, 'twitter')}
             >
-              <Box as={Twitter} tx="social" variant="icon" strokeWidth="1.5" aria-hidden="true" />
+              <Box
+                as={Twitter}
+                tx="social"
+                variant="icon"
+                strokeWidth="1.5"
+                aria-hidden="true"
+              />
               <Text variant={isSmall ? 'srOnly' : ''}>Twitter</Text>
             </Link>
           </Box>
@@ -122,7 +154,13 @@ const Social = ({
               rel="noopener noreferrer"
               onClick={e => handleClick(e, 'github')}
             >
-              <Box as={GitHub} tx="social" variant="icon" strokeWidth="1.5" aria-hidden="true" />
+              <Box
+                as={GitHub}
+                tx="social"
+                variant="icon"
+                strokeWidth="1.5"
+                aria-hidden="true"
+              />
               <Text variant={isSmall ? 'srOnly' : ''}>GitHub</Text>
             </Link>
           </Box>
@@ -138,7 +176,13 @@ const Social = ({
               rel="noopener noreferrer"
               onClick={e => handleClick(e, 'dribbble')}
             >
-              <Box as={Dribbble} tx="social" variant="icon" strokeWidth="1.5" aria-hidden="true" />
+              <Box
+                as={Dribbble}
+                tx="social"
+                variant="icon"
+                strokeWidth="1.5"
+                aria-hidden="true"
+              />
               <Text variant={isSmall ? 'srOnly' : ''}>Dribbble</Text>
             </Link>
           </Box>
@@ -153,7 +197,13 @@ const Social = ({
               rel="noopener noreferrer"
               onClick={e => handleClick(e, 'resume')}
             >
-              <Box as={FileText} tx="social" variant="icon" strokeWidth="1.5" aria-hidden="true" />
+              <Box
+                as={FileText}
+                tx="social"
+                variant="icon"
+                strokeWidth="1.5"
+                aria-hidden="true"
+              />
               <Text variant={isSmall ? 'srOnly' : ''}>Resume</Text>
             </Link>
           </Box>
@@ -168,7 +218,13 @@ const Social = ({
               rel="noopener noreferrer"
               onClick={e => handleClick(e, 'website')}
             >
-              <Box as={ExternalLink} tx="social" variant="icon" strokeWidth="1.5" aria-hidden="true" />
+              <Box
+                as={ExternalLink}
+                tx="social"
+                variant="icon"
+                strokeWidth="1.5"
+                aria-hidden="true"
+              />
               <Text variant={isSmall ? 'srOnly' : ''}>{website}</Text>
             </Link>
           </Box>

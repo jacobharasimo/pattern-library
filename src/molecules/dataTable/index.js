@@ -51,7 +51,8 @@ export const DataTable = ({
   const columns = useMemo(() => columnDefinition, [columnDefinition]);
   const resizeObserverErrorFix = e => {
     if (
-      e.message === 'ResizeObserver loop completed with undelivered notifications.' ||
+      e.message ===
+        'ResizeObserver loop completed with undelivered notifications.' ||
       e.message === 'ResizeObserver loop limit exceeded'
     ) {
       e.stopImmediatePropagation();
@@ -74,7 +75,14 @@ export const DataTable = ({
     },
     useSortBy,
   );
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow, state } = tableInstance;
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    rows,
+    prepareRow,
+    state,
+  } = tableInstance;
   const previousSort = usePrevious(state.sortBy);
 
   useEffect(() => {
@@ -89,7 +97,10 @@ export const DataTable = ({
     }
   }, [onSort, previousSort, state.sortBy]);
 
-  const isItemLoaded = useCallback(index => !hasMore || !!items[index], [hasMore, items]);
+  const isItemLoaded = useCallback(
+    index => !hasMore || !!items[index],
+    [hasMore, items],
+  );
   const renderActionMenu = useCallback(
     ({ row, isLast = true }) => {
       if (!isLast || !rowActions || !rowActions.items) {
@@ -130,12 +141,22 @@ export const DataTable = ({
               ),
             }}
           >
-            <Card variant="card.default" sx={{ position: 'fixed' }} py={2} px={0}>
+            <Card
+              variant="card.default"
+              sx={{ position: 'fixed' }}
+              py={2}
+              px={0}
+            >
               <Flex flexDirection="column" width={`${actionMenuWidth}px`}>
                 {rowActions.items.map(
-                  ({ isDisabled = () => false, Item = Button, onClick = () => {}, ...props }, index) => (
+                  ({
+                    isDisabled = () => false,
+                    Item = Button,
+                    onClick = () => {},
+                    ...props
+                  }) => (
                     <Item
-                      key={`row_actions${index}`}
+                      key={`row_actions${JSON.stringify(props)}`}
                       row={row}
                       width={1}
                       textAlign="left"
@@ -163,7 +184,14 @@ export const DataTable = ({
       const row = rows[index];
       prepareRow(row);
       return (
-        <Flex role="row" tx="dataTable" variant="tr" {...row.getRowProps()} width={1} data-testid="data-row">
+        <Flex
+          role="row"
+          tx="dataTable"
+          variant="tr"
+          {...row.getRowProps()}
+          width={1}
+          data-testid="data-row"
+        >
           <Flex width={1} flexDirection="row" flexGrow={1}>
             {isItemLoaded(index) &&
               row.cells.map(cell => (
@@ -191,8 +219,21 @@ export const DataTable = ({
     <ThemeProvider theme={theme}>
       <Flex data-testid="data-table" height="100%" width={1} {...rest}>
         <Box width={1}>
-          <Flex role="table" tx="dataTable" variant="table" data-testid="table" {...getTableProps()}>
-            <Flex role="rowgroup" tx="dataTable" variant="thead" data-testid="thead" width={1} flexDirection="row">
+          <Flex
+            role="table"
+            tx="dataTable"
+            variant="table"
+            data-testid="table"
+            {...getTableProps()}
+          >
+            <Flex
+              role="rowgroup"
+              tx="dataTable"
+              variant="thead"
+              data-testid="thead"
+              width={1}
+              flexDirection="row"
+            >
               {headerGroups.map(headerGroup => (
                 <Flex
                   role="row"
@@ -215,7 +256,10 @@ export const DataTable = ({
                     >
                       <Text>{column.render('Header')}</Text>
                       {canSort && !column.disableSortBy && (
-                        <Flex className="sortControls" data-testid="sort-controls">
+                        <Flex
+                          className="sortControls"
+                          data-testid="sort-controls"
+                        >
                           {!column.isSorted && (
                             <Flex
                               sx={{ position: 'absolute', top: '4px' }}
@@ -330,13 +374,23 @@ export const DataTable = ({
                   itemContent={index => renderRow({ index })}
                   components={{
                     // eslint-disable-next-line react/no-multi-comp
-                    Footer: () => <LoadMore hasMore={hasMore} isLoadingMore={isLoadingMore} />,
+                    Footer: () => (
+                      <LoadMore
+                        hasMore={hasMore}
+                        isLoadingMore={isLoadingMore}
+                      />
+                    ),
                   }}
                   {...virtuosoProps}
                 />
               )}
               {!isInitialized && (
-                <Flex role="row" width={1} sx={{ minHeight: '2em' }} data-testid="loading-zone">
+                <Flex
+                  role="row"
+                  width={1}
+                  sx={{ minHeight: '2em' }}
+                  data-testid="loading-zone"
+                >
                   <Box
                     data-testid="table-loader-row"
                     role="cell"
@@ -359,23 +413,36 @@ export const DataTable = ({
 DataTable.propTypes = {
   loadMore: PropTypes.func.isRequired,
   items: PropTypes.array,
-  initialSortBy: PropTypes.shape({ id: PropTypes.string, desc: PropTypes.bool }),
+  initialSortBy: PropTypes.shape({
+    id: PropTypes.string,
+    desc: PropTypes.bool,
+  }),
   canSort: PropTypes.bool,
   columnDefinition: PropTypes.arrayOf(
     PropTypes.shape({
       Header: PropTypes.string.isRequired,
       accessor: PropTypes.string.isRequired,
-      width: PropTypes.oneOfType([PropTypes.array, PropTypes.string, PropTypes.number]).isRequired,
+      width: PropTypes.oneOfType([
+        PropTypes.array,
+        PropTypes.string,
+        PropTypes.number,
+      ]).isRequired,
     }),
   ).isRequired,
   onSort: PropTypes.func,
-  rowActions: PropTypes.shape({ height: PropTypes.number, items: PropTypes.arrayOf(PropTypes.object) }),
+  rowActions: PropTypes.shape({
+    height: PropTypes.number,
+    items: PropTypes.arrayOf(PropTypes.object),
+  }),
   hasMore: PropTypes.bool.isRequired,
   isLoadingMore: PropTypes.bool,
   isInitialized: PropTypes.bool.isRequired,
   initialItemCount: PropTypes.number,
   overscan: PropTypes.number,
-  emptyView: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+  emptyView: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
   virtuosoProps: PropTypes.object,
 };
 DataTable.defaultProps = {

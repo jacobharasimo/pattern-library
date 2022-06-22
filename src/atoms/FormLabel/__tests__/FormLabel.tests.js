@@ -11,7 +11,9 @@ describe('FormLabel', () => {
   });
 
   it('renders with htmlFor', () => {
-    const { container } = render(<FormLabel htmlFor="another-field-id">Label</FormLabel>);
+    const { container } = render(
+      <FormLabel htmlFor="another-field-id">Label</FormLabel>,
+    );
 
     expect(container).not.toBeNull();
   });

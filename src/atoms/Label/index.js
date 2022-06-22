@@ -17,8 +17,21 @@ const LabelWrapper = styled.div`
   line-height: var(--space-md);
 `;
 
-const Label = ({ background, children, className, color, content, onRemove, ...rest }) => (
-  <LabelWrapper className={className} $background={background} $color={color} {...rest}>
+const Label = ({
+  background,
+  children,
+  className,
+  color,
+  content,
+  onRemove,
+  ...rest
+}) => (
+  <LabelWrapper
+    className={className}
+    $background={background}
+    $color={color}
+    {...rest}
+  >
     {content || children}
     {onRemove && (
       <Box

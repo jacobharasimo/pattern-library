@@ -61,15 +61,37 @@ export const SearchableList = ({
                 sx={{ height: listHeight, position: 'relative' }}
               >
                 {list.map(item => (
-                  <ItemTemplate key={JSON.stringify(item)} {...item} onChange={onItemChange} />
+                  <ItemTemplate
+                    key={JSON.stringify(item)}
+                    {...item}
+                    onChange={onItemChange}
+                  />
                 ))}
               </Box>
             )}
 
             {showCreate && (
-              <Box data-testid="create-button" variant="header.borderTop" mt={2} width={1}>
-                <AsyncButton width={1} pl={0} variant="link" type="submit" loading={loading} sx={{ textAlign: 'left' }}>
-                  <Box height="16px" width="auto" as={Plus} strokeWidth="1.5" mr={2} />
+              <Box
+                data-testid="create-button"
+                variant="header.borderTop"
+                mt={2}
+                width={1}
+              >
+                <AsyncButton
+                  width={1}
+                  pl={0}
+                  variant="link"
+                  type="submit"
+                  loading={loading}
+                  sx={{ textAlign: 'left' }}
+                >
+                  <Box
+                    height="16px"
+                    width="auto"
+                    as={Plus}
+                    strokeWidth="1.5"
+                    mr={2}
+                  />
                   Create list for &quot;{keyword}&quot;
                   {list.includes(keyword)}
                 </AsyncButton>

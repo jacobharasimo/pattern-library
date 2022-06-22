@@ -6,49 +6,56 @@ import { ThemeProvider } from 'styled-components';
 import theme from '../../theme';
 
 const DEBOUNCE_TIME = 500;
-const Input = forwardRef(({ className, delayed, error, onChange, size, style, value, ...rebassProps }, ref) => {
-  const innerRef = useRef(ref);
-  const [currentValue, setCurrentValue] = useState(value);
-  const currentOnChange = delayed ? debounce(onChange, DEBOUNCE_TIME) : onChange;
+const Input = forwardRef(
+  (
+    { className, delayed, error, onChange, size, style, value, ...rebassProps },
+    ref,
+  ) => {
+    const innerRef = useRef(ref);
+    const [currentValue, setCurrentValue] = useState(value);
+    const currentOnChange = delayed
+      ? debounce(onChange, DEBOUNCE_TIME)
+      : onChange;
 
-  useEffect(() => setCurrentValue(value), [value]);
+    useEffect(() => setCurrentValue(value), [value]);
 
-  const getVariant = () => {
-    switch (size) {
-      case 'lg':
-        return 'inputLarge';
-      case 'sm':
-        return 'inputSmall';
-      default:
-        return 'input';
-    }
-  };
+    const getVariant = () => {
+      switch (size) {
+        case 'lg':
+          return 'inputLarge';
+        case 'sm':
+          return 'inputSmall';
+        default:
+          return 'input';
+      }
+    };
 
-  const handleOnChange = event => {
-    setCurrentValue(event.target.value);
+    const handleOnChange = event => {
+      setCurrentValue(event.target.value);
 
-    currentOnChange(event.persist() || event);
-  };
+      currentOnChange(event.persist() || event);
+    };
 
-  return (
-    <ThemeProvider theme={theme}>
-      <RebassInput
-        ref={innerRef}
-        className={className}
-        error={error}
-        onChange={handleOnChange}
-        style={style}
-        sx={{
-          borderColor: error ? 'danger' : 'neutral.300',
-        }}
-        tx="forms"
-        value={currentValue}
-        variant={getVariant()}
-        {...rebassProps}
-      />
-    </ThemeProvider>
-  );
-});
+    return (
+      <ThemeProvider theme={theme}>
+        <RebassInput
+          ref={innerRef}
+          className={className}
+          error={error}
+          onChange={handleOnChange}
+          style={style}
+          sx={{
+            borderColor: error ? 'danger' : 'neutral.300',
+          }}
+          tx="forms"
+          value={currentValue}
+          variant={getVariant()}
+          {...rebassProps}
+        />
+      </ThemeProvider>
+    );
+  },
+);
 
 Input.propTypes = {
   className: PropTypes.string,

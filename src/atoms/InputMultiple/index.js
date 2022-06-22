@@ -76,9 +76,9 @@ const InputMultiple = ({
         )}
         {!!elements.length && (
           <Box sx={{ margin: '0.9375rem auto' }}>
-            {elements.map((e, idx) => (
+            {elements.map(e => (
               <ListItem
-                key={idx}
+                key={JSON.stringify(e)}
                 content={e}
                 onRemove={() => handleDelete(e)}
                 orientation={selectedOptionsOrientation}

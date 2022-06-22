@@ -4,7 +4,16 @@ import { Flex, Box, Text } from 'rebass/styled-components';
 import { Field } from 'formik';
 import Radio from '../../atoms/Radio';
 
-export const RadioButtonGroup = ({ name, labelFontWeight, labelTextColor, options, label, id, selected, onChange }) => (
+export const RadioButtonGroup = ({
+  name,
+  labelFontWeight,
+  labelTextColor,
+  options,
+  label,
+  id,
+  selected,
+  onChange,
+}) => (
   <Flex role="radiogroup" aria-labelledby={id} width={[1]} flexWrap={['wrap']}>
     <Text
       color={labelTextColor}

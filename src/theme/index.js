@@ -155,7 +155,14 @@ const customTheme = {
     textPlaceholder: colors.neutral[300],
 
     /* Deprecated don't use */
-    gray: [colors.gray1, colors.gray2, colors.gray3, colors.gray4, colors.gray5, colors.gray6],
+    gray: [
+      colors.gray1,
+      colors.gray2,
+      colors.gray3,
+      colors.gray4,
+      colors.gray5,
+      colors.gray6,
+    ],
     success: colors.green[600],
     info: colors.blue[600],
     warning: colors.orange[600],
@@ -627,7 +634,12 @@ const customTheme = {
       py: 2,
       transition: 'all .3s',
       bg: 'neutral.0',
-      ':disabled': { backgroundColor: 'neutral.50', color: 'textSubtle', borderColor: 'neutral.100', opacity: 1 },
+      ':disabled': {
+        backgroundColor: 'neutral.50',
+        color: 'textSubtle',
+        borderColor: 'neutral.100',
+        opacity: 1,
+      },
       '::placeholder': { color: 'textPlaceholder' },
     },
     inputLarge: {
@@ -672,7 +684,8 @@ const customTheme = {
     xs: ' 0px 1px 0px rgba(0, 0, 0, 0.06)',
     small: '0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 8px rgba(0, 0, 0, 0.1)',
     medium: '0 1px 8px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(0, 0, 0, 0.15)',
-    large: '0 1px 8px rgba(0, 0, 0, 0.1), 0 16px 48px rgba(0, 0, 0, 0.1),0 24px 60px rgba(0, 0, 0, 0.1)',
+    large:
+      '0 1px 8px rgba(0, 0, 0, 0.1), 0 16px 48px rgba(0, 0, 0, 0.1),0 24px 60px rgba(0, 0, 0, 0.1)',
   },
   modals: {
     default: {
@@ -905,7 +918,12 @@ const customTheme = {
       borderColor: 'neutral.100',
       borderTopColor: 'purple.400',
     },
-    tr: { py: 2, position: 'relative', alignItems: 'flex-start', overflow: 'visible' },
+    tr: {
+      py: 2,
+      position: 'relative',
+      alignItems: 'flex-start',
+      overflow: 'visible',
+    },
     thead: {
       flexDirection: 'column',
       color: 'textSubtle',

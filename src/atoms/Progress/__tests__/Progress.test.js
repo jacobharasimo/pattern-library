@@ -15,12 +15,24 @@ describe('Progress Component', () => {
   });
 
   it('render correctly with snapshot', () => {
-    component = render(<Progress showText={progress.showText} step={progress.step} total={progress.total} />);
+    component = render(
+      <Progress
+        showText={progress.showText}
+        step={progress.step}
+        total={progress.total}
+      />,
+    );
     expect(component).toMatchSnapshot();
   });
 
   it('render correctly with step greater than total', () => {
-    component = render(<Progress showText={progress.showText} step={progress.total + 1} total={progress.total} />);
+    component = render(
+      <Progress
+        showText={progress.showText}
+        step={progress.total + 1}
+        total={progress.total}
+      />,
+    );
     expect(component).toMatchSnapshot();
   });
 });

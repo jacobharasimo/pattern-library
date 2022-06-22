@@ -33,7 +33,10 @@ export const JobSource = ({ canUpdateJobSources, source, onEditClick }) => {
           <Flex flexDirection={['row']}>
             <Box width={[1 / 3]}>Status</Box>
             <Box width={[2 / 3]}>
-              <StatusIndicator status={ocpStatus.status} statusColor={ocpStatus.statusColor} />
+              <StatusIndicator
+                status={ocpStatus.status}
+                statusColor={ocpStatus.statusColor}
+              />
             </Box>
           </Flex>
         </Box>
@@ -43,7 +46,11 @@ export const JobSource = ({ canUpdateJobSources, source, onEditClick }) => {
             <Box width={[2 / 3]}>
               {scrapedAt ? (
                 <Popover
-                  content={scrapedAt ? moment(scrapedAt).format('D MMM, YYYY [at] hh:mm a') : 'Not available'}
+                  content={
+                    scrapedAt
+                      ? moment(scrapedAt).format('D MMM, YYYY [at] hh:mm a')
+                      : 'Not available'
+                  }
                   trigger={<span>{moment().from(scrapedAt, true)} ago</span>}
                 />
               ) : (

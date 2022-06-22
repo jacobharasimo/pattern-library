@@ -43,7 +43,9 @@ describe('Search', () => {
       { label: 'option 1', value: 'option1' },
       { label: 'option 2', value: 'option2' },
     ];
-    props.selectedItemLabelFormatter = jest.fn().mockImplementation(() => 'Generated label ');
+    props.selectedItemLabelFormatter = jest
+      .fn()
+      .mockImplementation(() => 'Generated label ');
     component = render(<Search {...props} />);
     expect(component).toMatchSnapshot();
   });

@@ -18,7 +18,9 @@ describe('EditPanel', () => {
   });
 
   it('renders', () => {
-    const { queryByTestId, getByTestId, container } = render(<EditPanel {...initProps}>Content goes here.</EditPanel>);
+    const { queryByTestId, getByTestId, container } = render(
+      <EditPanel {...initProps}>Content goes here.</EditPanel>,
+    );
     expect(container).not.toBeNull();
     expect(getByTestId('header')).not.toBeNull();
     expect(getByTestId('header-action')).not.toBeNull();
@@ -28,25 +30,33 @@ describe('EditPanel', () => {
 
   it('shows a loader', () => {
     initProps.isLoading = true;
-    const { queryByTestId, container } = render(<EditPanel {...initProps}>Content goes here.</EditPanel>);
+    const { queryByTestId, container } = render(
+      <EditPanel {...initProps}>Content goes here.</EditPanel>,
+    );
     expect(container).not.toBeNull();
     expect(queryByTestId('loader')).not.toBeNull();
   });
 
   it('renders children', () => {
-    const { container } = render(<EditPanel {...initProps}>Content goes here.</EditPanel>);
+    const { container } = render(
+      <EditPanel {...initProps}>Content goes here.</EditPanel>,
+    );
     expect(container).not.toBeNull();
     expect(queryByText(container, 'Content goes here.')).not.toBeNull();
   });
 
   it('renders children functions', () => {
-    const { container } = render(<EditPanel {...initProps}>{() => <>some other children</>}</EditPanel>);
+    const { container } = render(
+      <EditPanel {...initProps}>{() => <>some other children</>}</EditPanel>,
+    );
     expect(container).not.toBeNull();
     expect(queryByText(container, 'some other children')).not.toBeNull();
   });
 
   it('renders a header button', () => {
-    const { queryByTestId, container, rerender } = render(<EditPanel {...initProps}>Content goes here.</EditPanel>);
+    const { queryByTestId, container, rerender } = render(
+      <EditPanel {...initProps}>Content goes here.</EditPanel>,
+    );
     expect(container).not.toBeNull();
     const headerButton = queryByTestId('header-action');
     expect(queryByText(headerButton, 'Edit')).not.toBeNull();
@@ -61,7 +71,9 @@ describe('EditPanel', () => {
   });
 
   it('calls onEditClick as needed', () => {
-    const { queryByTestId, container } = render(<EditPanel {...initProps}>Content goes here.</EditPanel>);
+    const { queryByTestId, container } = render(
+      <EditPanel {...initProps}>Content goes here.</EditPanel>,
+    );
     expect(container).not.toBeNull();
     queryByTestId('header-action').click();
     expect(initProps.onEditClick).toHaveBeenCalledTimes(1);
@@ -69,7 +81,9 @@ describe('EditPanel', () => {
 
   it('can render the footer as needed', () => {
     initProps.isLoading = true;
-    const { queryByTestId, container, rerender } = render(<EditPanel {...initProps}>Content goes here.</EditPanel>);
+    const { queryByTestId, container, rerender } = render(
+      <EditPanel {...initProps}>Content goes here.</EditPanel>,
+    );
     expect(container).not.toBeNull();
     expect(queryByTestId('footer')).toBeNull();
 
@@ -85,7 +99,9 @@ describe('EditPanel', () => {
   });
 
   it('has a cancel button when in edit mode', () => {
-    const { queryByTestId, container } = render(<EditPanel {...initProps}>Content goes here.</EditPanel>);
+    const { queryByTestId, container } = render(
+      <EditPanel {...initProps}>Content goes here.</EditPanel>,
+    );
     expect(container).not.toBeNull();
     queryByTestId('header-action').click();
     expect(queryByTestId('footer-actions')).not.toBeNull();

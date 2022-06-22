@@ -23,7 +23,13 @@ export const LoadingSpinner = ({ isLoading, variant, ...props }) => {
   }
   return (
     <ThemeProvider theme={theme}>
-      <Box data-testid="loading-spinner" css={animationCss} tx="buttonLoader" variant={variant} {...props}>
+      <Box
+        data-testid="loading-spinner"
+        css={animationCss}
+        tx="buttonLoader"
+        variant={variant}
+        {...props}
+      >
         <Text variant="srOnly">Loading</Text>
       </Box>
     </ThemeProvider>

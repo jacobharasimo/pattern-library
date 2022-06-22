@@ -20,7 +20,12 @@ export const Button = ({ type, size, sx, ...props }) => {
   }
   return (
     <ThemeProvider theme={theme}>
-      <BaseButton sx={{ ...sizeStyles, ...sx }} type={type} data-testid="base-button" {...props} />
+      <BaseButton
+        sx={{ ...sizeStyles, ...sx }}
+        type={type}
+        data-testid="base-button"
+        {...props}
+      />
     </ThemeProvider>
   );
 };

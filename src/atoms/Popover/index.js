@@ -46,7 +46,9 @@ const Popover = ({ className, content, dark, header, trigger, ...rest }) => (
     <Styles />
     <Popup className={className} inverted={dark} trigger={trigger} {...rest}>
       {header && <Popup.Header>{header}</Popup.Header>}
-      {content && <Popup.Content dangerouslySetInnerHTML={{ __html: marked(content) }} />}
+      {content && (
+        <Popup.Content dangerouslySetInnerHTML={{ __html: marked(content) }} />
+      )}
     </Popup>
   </>
 );

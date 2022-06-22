@@ -8,7 +8,8 @@ export const Accordion = ({ isOpen, children, title, ...props }) => {
   const [accordionId, setAccordionId] = useState(1);
 
   useEffect(() => {
-    let nextId = document.querySelectorAll('[data-testid="accordion"]').length || 1;
+    let nextId =
+      document.querySelectorAll('[data-testid="accordion"]').length || 1;
     if (document.getElementById(`accordion${nextId}id`)) {
       nextId += 1;
     }
@@ -20,7 +21,13 @@ export const Accordion = ({ isOpen, children, title, ...props }) => {
   }, [isOpen]);
 
   return (
-    <Flex data-testid="accordion" aria-expanded={isAccordionOpen} flexDirection="column" tx="accordion" {...props}>
+    <Flex
+      data-testid="accordion"
+      aria-expanded={isAccordionOpen}
+      flexDirection="column"
+      tx="accordion"
+      {...props}
+    >
       <Button
         tx="accordion"
         variant="button"
@@ -32,7 +39,12 @@ export const Accordion = ({ isOpen, children, title, ...props }) => {
         data-testid="title"
       >
         {title}
-        <Box height="16px" as={isAccordionOpen ? ChevronUp : ChevronDown} strokeWidth="2" ml="auto" />
+        <Box
+          height="16px"
+          as={isAccordionOpen ? ChevronUp : ChevronDown}
+          strokeWidth="2"
+          ml="auto"
+        />
       </Button>
       <Box
         tx="accordion"
@@ -59,8 +71,14 @@ export const Accordion = ({ isOpen, children, title, ...props }) => {
 };
 
 Accordion.propTypes = {
-  title: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
+  title: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
   isOpen: PropTypes.bool,
 };
 

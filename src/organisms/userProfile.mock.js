@@ -10,7 +10,8 @@ export const userProfile = {
   firstName: 'Rachel',
   id: 416,
   lastName: 'Morrison',
-  resumeUrl: 'https://internal.sandbox1.getro.com/files?path=sandbox%2F1-NextJS+AWS+Pattern.pdf',
+  resumeUrl:
+    'https://internal.sandbox1.getro.com/files?path=sandbox%2F1-NextJS+AWS+Pattern.pdf',
   verified: false,
   email: 'email@gmail.com',
   jobFunctions: [],
@@ -26,7 +27,8 @@ export const userProfile = {
       id: 374,
       createdAt: '2021-12-08T14:32:38.056Z',
       relationshipLevel: 1,
-      relationshipText: 'this is to test how a vouch will be displayed in the new FE of platform',
+      relationshipText:
+        'this is to test how a vouch will be displayed in the new FE of platform',
       recommendationText: null,
       voucher: {
         id: 1,
@@ -62,7 +64,8 @@ export const userProfile = {
       id: 376,
       createdAt: '2021-12-08T14:32:38.056Z',
       relationshipLevel: 3,
-      relationshipText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+      relationshipText:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
       recommendationText: null,
       voucher: {
         id: 1,

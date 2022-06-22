@@ -6,7 +6,15 @@ import FocusTrap from 'focus-trap-react';
 import { ThemeProvider } from 'styled-components';
 import theme from '../../theme';
 
-export const Modal = ({ 'data-testid': dataTestId, title, isOpen, onCancel, actions, variant, children }) => {
+export const Modal = ({
+  'data-testid': dataTestId,
+  title,
+  isOpen,
+  onCancel,
+  actions,
+  variant,
+  children,
+}) => {
   const wrapperId = `modal-wrapper ${dataTestId}`;
 
   const escapeKeyClose = e => {
@@ -45,9 +53,21 @@ export const Modal = ({ 'data-testid': dataTestId, title, isOpen, onCancel, acti
         justifyContent="center"
         alignItems="center"
         flexDirection="column"
-        sx={{ height: '100%', width: '100%', position: 'fixed', top: 0, left: 0, overflow: 'hidden' }}
+        sx={{
+          height: '100%',
+          width: '100%',
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          overflow: 'hidden',
+        }}
       >
-        <Box data-testid="overlay" tx="modals" variant={`${variant}.overlay`} onClick={onCancel} />
+        <Box
+          data-testid="overlay"
+          tx="modals"
+          variant={`${variant}.overlay`}
+          onClick={onCancel}
+        />
         <FocusTrap
           focusTrapOptions={{
             initialFocus: '[data-testid="modal"]',
@@ -63,8 +83,16 @@ export const Modal = ({ 'data-testid': dataTestId, title, isOpen, onCancel, acti
             variant={`${variant}.modal`}
           >
             {title && (
-              <Flex data-testid="header" tx="modals" variant={`${variant}.header`}>
-                <Text data-testid="title" tx="modals" variant={`${variant}.title`}>
+              <Flex
+                data-testid="header"
+                tx="modals"
+                variant={`${variant}.header`}
+              >
+                <Text
+                  data-testid="title"
+                  tx="modals"
+                  variant={`${variant}.title`}
+                >
                   {title}
                 </Text>
                 <Button
@@ -74,7 +102,13 @@ export const Modal = ({ 'data-testid': dataTestId, title, isOpen, onCancel, acti
                   display="flex"
                   onClick={onCancel}
                 >
-                  <Box height="24px" width="24px" strokeWidth="1.5" aria-hidden="true" as={X} />
+                  <Box
+                    height="24px"
+                    width="24px"
+                    strokeWidth="1.5"
+                    aria-hidden="true"
+                    as={X}
+                  />
                   <Text variant="srOnly">Close</Text>
                 </Button>
               </Flex>
@@ -94,14 +128,24 @@ export const Modal = ({ 'data-testid': dataTestId, title, isOpen, onCancel, acti
                   display="flex"
                   onClick={onCancel}
                 >
-                  <Box height="24px" width="24px" strokeWidth="1.5" aria-hidden="true" as={X} />
+                  <Box
+                    height="24px"
+                    width="24px"
+                    strokeWidth="1.5"
+                    aria-hidden="true"
+                    as={X}
+                  />
                   <Text variant="srOnly">Close</Text>
                 </Button>
               )}
               {children}
             </Box>
             {actions && (
-              <Box data-testid="footer" tx="modals" variant={`${variant}.footer`}>
+              <Box
+                data-testid="footer"
+                tx="modals"
+                variant={`${variant}.footer`}
+              >
                 {actions}
               </Box>
             )}

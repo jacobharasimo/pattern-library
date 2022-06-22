@@ -25,7 +25,10 @@ const ErrorMessage = ({ children, ...rebassProps }) => (
 );
 
 ErrorMessage.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
 };
 
 export default ErrorMessage;
